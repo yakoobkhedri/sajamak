@@ -1,0 +1,275 @@
+@font-face {
+    font-family: "parastoo-Regular";
+    src: url('../fonts/web/Farsi-Digits-Without-Latin/Parastoo-FD-WOL.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "parastoo-Bold";
+    src: url('../fonts/web/Farsi-Digits-Without-Latin/Parastoo-Bold-FD-WOL.ttf') format("truetype");
+}
+
+body {
+    font-family: "parastoo-Regular";
+    user-select: none;
+}
+
+.font-bold {
+    font-family: "parastoo-Bold";
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.bg-gray {
+    background-color: #F3F4F6;
+}
+
+.bg-gray2 {
+    background-color: #374151;
+}
+
+.bg-gray3 {
+    background-color: #E5E7EB;
+}
+
+.bg-orange {
+    background-color: #FFA800;
+}
+
+.text-gray {
+    color: #1F2A37;
+}
+
+.text-gray2 {
+    color: #374151;
+}
+
+.rotate-45 {
+    transform: rotate(45deg);
+}
+
+.outline-none {
+    outline: none;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .4s;
+}
+
+.fs-7 {
+    font-size: 12px;
+}
+
+.fs-8 {
+    font-size: 10px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.w-15 {
+    width: 15px;
+}
+
+.h-37 {
+    height: 37px;
+}
+
+.w-30 {
+    width: 30px;
+}
+
+.w-37 {
+    width: 37px;
+}
+
+.w-171 {
+    width: 171px;
+}
+
+.w-184 {
+    width: 184px;
+}
+
+.w-390 {
+    width: 390px;
+}
+
+.divider {
+    width: 1.5px;
+    height: 38px;
+    background-color: #D1D5DB;
+
+}
+
+.after,
+.before,
+.overlay {
+    position: relative;
+}
+
+.after::after {
+    content: '';
+    position: absolute;
+    background-color: #FFA800;
+    width: 64px;
+    height: 3px;
+    right: 0;
+    bottom: -14px;
+    border-radius: 13px;
+}
+
+.before::before {
+    content: url('../img/Polygon\ 4.svg');
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+}
+
+.before.single::before {
+    right: -247px;
+}
+
+.overlay::after {
+    content: '';
+    position: absolute;
+    background-color: #1F2A37BF;
+    inset: 0;
+}
+
+.service::after {
+    content: url('../img/Polygon\ 1\(1\).svg');
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+}
+.service.benefit:hover::after {
+    content: url('../img/Polygon\ 44.svg');
+}
+
+.form-select {
+    background-position: left.75rem center;
+}
+
+.transition {
+    transition: all .4s;
+}
+
+.rounded-4 {
+    border-radius: 18px;
+}
+
+.rounded-12 {
+    border-radius: 12px;
+}
+
+.opacity-none {
+    opacity: 0;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    float: right;
+    padding-left: 0.5rem;
+}
+
+.alert-dismissible .btn-close {
+    left: 0;
+    right: auto;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+    bottom: 15px;
+}
+
+.swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    background: white;
+}
+.brands .swiper-pagination-bullet {
+    background: #00bed8!important;
+  }
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+    background: white;
+    width: 20px;
+    height: 8px;
+    border-radius: 5px;
+}
+
+.bottom-31 {
+    bottom: -31px;
+}
+
+.top-99 {
+    top: -100px;
+}
+
+.right-51 {
+    right: -51px;
+}
+
+.opacity-03{
+    opacity: 0.3;
+}
+
+.accordion-button::after {
+  margin-right: auto;
+  margin-left: 0;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #F3F4F6;
+}
+.accordion-button:not(.collapsed)::after {
+    filter: contrast(0%);
+  }
+
+/* machines */
+.machine-img-box {
+    height: 199px;
+}
+
+/* statistics */
+.statistics .col-lg-5::after {
+    content: url('../img/Polygon\ 4\(1\).svg');
+    position: absolute;
+    left: -1px;
+    top: 27%;
+}
+
+/* app */
+.app .col-lg-5::after {
+    content: url('../img/Polygon\ 4\(1\).svg');
+    position: absolute;
+    right: 37px;
+    top: -62px;
+    transform: rotate(90deg);
+}
+
+/* footer */
+footer .arrow-link {
+    transform: rotate(180deg);
+    top: -41px;
+}
+
+/* responsive */
+@media only screen and (max-width:1400px) {}
+
+@media only screen and (max-width:1200px) {}
+
+@media only screen and (max-width:992px) {}
+
+@media only screen and (max-width:768px) {}
+
+@media only screen and (max-width:576px) {}
+
+@media only screen and (max-width:400px) {}
