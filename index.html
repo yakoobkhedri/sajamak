@@ -14,26 +14,37 @@
 <body>
   <!-- header -->
   <header class="py-3">
-    <div class="d-flex container align-items-lg-center gap-4 flex-column flex-lg-row justify-content-lg-between">
+    <!-- overlay -->
+    <div id="overlay" class="position-fixed end-0 top-0 start-0 bottom-0"></div>
+    <div class="d-flex container align-items-center gap-4 justify-content-between">
+      <!-- ham icon -->
+      <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
+        class="bi bi-list d-xl-none cursor flex-shrink-0" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+      </svg>
       <div class="d-flex flex-column flex-md-row align-items-center gap-3">
         <div class="d-flex align-items-center gap-4 justify-content-between w-100">
           <!-- logo -->
-          <svg id="openSidebar" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
-            class="bi bi-list d-lg-none cursor flex-shrink-0" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-          </svg>
           <a>
             <img alt="logo" src="assets/img/Frame 9249.png">
           </a>
           <!-- nav -->
           <nav>
-            <ul class="list-unstyled m-0 p-0 d-flex align-items-center gap-4 text-secondary fw-bold">
+            <ul
+              class="list-unstyled m-0 p-xl-0 p-3 d-flex flex-column flex-xl-row align-items-xl-center gap-4 text-secondary fw-bold">
               <li><a>اداری معدنی</a></li>
               <li><a>فنی مهندسی</a></li>
               <li><a>پیمانکاری معدن</a></li>
               <li><a>درباره ما</a></li>
               <li><a>تماس با ما</a></li>
+              <li>
+                <a
+                  class="btn btn-info py-2 px-3 d-xl-none d-flex align-items-center font-bold text-white justify-content-center gap-2 fs-7">
+                  <img alt="login" src="assets/img/login.svg" class="w-15">
+                  <span>ثبت نام / ورود</span>
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -41,7 +52,7 @@
       <!-- language && login -->
       <div class="d-flex align-items-center gap-3">
         <div
-          class="bg-orange cursor rounded-circle w-37 h-37 py-1 px-2 border d-flex align-items-center justify-content-center">
+          class="bg-orange d-none d-sm-flex cursor rounded-circle w-37 h-37 py-1 px-2 border align-items-center justify-content-center">
           <img alt="search" src="assets/img/Vector.svg">
         </div>
         <div class="language position-relative cursor">
@@ -61,11 +72,19 @@
           </ul>
         </div>
         <a
-          class="btn btn-info py-2 px-3 d-flex align-items-center font-bold text-white justify-content-center gap-2 fs-7">
+          class="btn btn-info py-2 px-3 d-xl-flex d-none align-items-center font-bold text-white justify-content-center gap-2 fs-7">
           <img alt="login" src="assets/img/login.svg" class="w-15">
           <span>ثبت نام / ورود</span>
         </a>
       </div>
+    </div>
+    <!-- mobile search -->
+    <div class="container mt-3">
+      <div
+      class="bg-orange d-flex d-sm-none cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
+      <input class="form-control bg-transparent border-0 focus-none">
+      <img alt="search" src="assets/img/Vector.svg">
+    </div>
     </div>
   </header>
 
@@ -80,7 +99,7 @@
             <div class="swiper-slide position-relative overlay">
               <div class="position-absolute w-50 bottom-0 z-10 mb-5 me-5">
                 <h3 class="font-bold after">پیمانکاری معادن سجامک</h3>
-                <p class="fs-14 fw-bold mt-4 lh-lg">
+                <p class="fs-14 fw-bold mt-4 lh-lg d-none d-md-block">
                   سجامک با بهره‌گیری از تیم متخصص و تجهیزات پیشرفته،
                   به بهره‌وری بیشتر، کاهش هزینه‌ها و افزایش سودآوری صنعت معدن کمک می‌کند.
                 </p>
@@ -90,7 +109,7 @@
             <div class="swiper-slide position-relative overlay">
               <div class="position-absolute w-50 bottom-0 z-10 mb-5 me-5">
                 <h3 class="font-bold after">پیمانکاری معادن سجامک</h3>
-                <p class="fs-14 fw-bold mt-4 lh-lg">
+                <p class="fs-14 fw-bold mt-4 lh-lg d-none d-md-block">
                   سجامک با بهره‌گیری از تیم متخصص و تجهیزات پیشرفته،
                   به بهره‌وری بیشتر، کاهش هزینه‌ها و افزایش سودآوری صنعت معدن کمک می‌کند.
                 </p>
@@ -100,7 +119,7 @@
             <div class="swiper-slide position-relative overlay">
               <div class="position-absolute w-50 bottom-0 z-10 mb-5 me-5">
                 <h3 class="font-bold after">پیمانکاری معادن سجامک</h3>
-                <p class="fs-14 fw-bold mt-4 lh-lg">
+                <p class="fs-14 fw-bold mt-4 lh-lg d-none d-md-block">
                   سجامک با بهره‌گیری از تیم متخصص و تجهیزات پیشرفته،
                   به بهره‌وری بیشتر، کاهش هزینه‌ها و افزایش سودآوری صنعت معدن کمک می‌کند.
                 </p>
@@ -110,7 +129,7 @@
             <div class="swiper-slide position-relative overlay">
               <div class="position-absolute w-50 bottom-0 z-10 mb-5 me-5">
                 <h3 class="font-bold after">پیمانکاری معادن سجامک</h3>
-                <p class="fs-14 fw-bold mt-4 lh-lg">
+                <p class="fs-14 fw-bold mt-4 lh-lg d-none d-md-block">
                   سجامک با بهره‌گیری از تیم متخصص و تجهیزات پیشرفته،
                   به بهره‌وری بیشتر، کاهش هزینه‌ها و افزایش سودآوری صنعت معدن کمک می‌کند.
                 </p>
@@ -475,7 +494,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 py-3 d-flex align-items-center border-start justify-content-center">
+              <div class="col-md-6 py-3 d-flex align-items-center border-start border-bottom justify-content-center">
                 <div class="d-flex align-items-center gap-2 justify-content-center">
                   <img alt="statistics" src="assets/img/Graph Report.svg">
                   <div>
@@ -484,7 +503,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-6 py-3 d-flex align-items-center justify-content-center">
+              <div class="col-md-6 py-3 d-flex align-items-center border-bottom justify-content-center">
                 <div class="d-flex align-items-center gap-2 justify-content-center">
                   <img alt="statistics" src="assets/img/Project.svg">
                   <div>
@@ -695,11 +714,11 @@
             </a>
           </div>
           <div class="col-lg-7">
-            <div class="d-flex flex-xl-row flex-lg-column flex-md-row flex-column align-items-end gap-2">
-              <img alt="" src="assets/img/Component 55.png" class="ms-lg-5 ms-xl-0 ms-0 d-none d-md-block">
+            <div class="d-flex flex-lg-column flex-xl-row flex-column align-items-lg-end align-items-center gap-2">
+              <img alt="" src="assets/img/Component 55.png" class="ms-lg-5 ms-xl-0 ms-0 d-none d-xl-block">
               <div class="d-flex flex-column">
-                <img alt="" src="assets/img/Component 53.png" class="position-relative right-51">
-                <div class="d-flex align-items-center gap-2">
+                <img alt="" src="assets/img/Component 53.png" class="position-relative right-51 w-100">
+                <div class="d-flex align-items-center justify-content-between justify-content-lg-start gap-2">
                   <img alt="" src="assets/img/Rectangle 73.png">
                   <img alt="" src="assets/img/Rectangle 74.png">
                   <img alt="" src="assets/img/Rectangle 75.png">
@@ -717,9 +736,13 @@
   <!-- footer -->
   <footer class="bg-gray position-relative mt-5">
     <img alt="polygon" src="assets/img/Polygon 1.svg" class="position-absolute top-0 end-0 start-0 mx-auto">
-    <a class="arrow-link border-dark position-absolute end-0 start-0 border rounded-4 text-dark mx-auto py-3 d-flex align-items-center justify-content-center w-30">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"></path>
+    <a
+      class="arrow-link border-dark position-absolute end-0 start-0 border rounded-4 text-dark mx-auto py-3 d-flex align-items-center justify-content-center w-30">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z">
+        </path>
       </svg>
     </a>
     <div class="container">
@@ -782,10 +805,11 @@
           </ul>
         </div>
       </div>
-      <div class="d-flex align-items-center justify-content-between text-secondary fs-7 fw-bold py-3 border-top">
-         <p class="mb-0">کلیه حقوق این سایت متعلق به سامانه جامع اجرایی معادن کشور می باشد.</p>
-         <p class="mb-0">2021-2022 ©  |  شرایط و ضوابط . سیاست حفظ حریم خصوصی</p>
-         <p class="mb-0">توسعه و پیاده سازی شرکت نرم افزاری رایان سپهر هامان</p>
+      <div
+        class="d-flex flex-column flex-lg-row gap-2 text-center text-lg-end align-items-center justify-content-between text-secondary fs-7 fw-bold py-3 border-top">
+        <p class="mb-0">کلیه حقوق این سایت متعلق به سامانه جامع اجرایی معادن کشور می باشد.</p>
+        <p class="mb-0">2021-2022 © | شرایط و ضوابط . سیاست حفظ حریم خصوصی</p>
+        <p class="mb-0">توسعه و پیاده سازی شرکت نرم افزاری رایان سپهر هامان</p>
       </div>
     </div>
   </footer>

@@ -1,3 +1,16 @@
+// mobile menu
+
+let hamIcon=document.getElementById('hamIcon');
+
+hamIcon.addEventListener('click',function () {
+  hamIcon.nextElementSibling.querySelector('nav').classList.add('active');
+  document.getElementById('overlay').classList.add('active');
+  document.getElementById('overlay').addEventListener('click',function () {
+    this.classList.remove('active');
+    this.nextElementSibling.querySelector('nav').classList.remove('active');
+  })
+})
+
 // swiper
 
 var menuSwiper = new Swiper(".banner", {
