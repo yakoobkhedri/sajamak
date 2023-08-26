@@ -43,7 +43,7 @@ var menuSwiper = new Swiper(".machines", {
 var menuSwiper = new Swiper(".brands", {
   loop: true,
   autoplay: true,
-  slidesPerView: 1,
+  slidesPerView: 2,
   spaceBetween: 40,
   breakpoints: {
     1200: {
@@ -53,7 +53,7 @@ var menuSwiper = new Swiper(".brands", {
       slidesPerView: 4
     },
     576: {
-      slidesPerView: 2
+      slidesPerView: 3
     },
   },
   pagination: {

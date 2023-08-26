@@ -12,10 +12,33 @@
 </head>
 
 <body>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div
+          class="d-flex cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
+          <input type="search" placeholder="جستجو..." class="form-control bg-transparent border-0 focus-none">
+          <div class="position-relative cursor">
+            <input type="submit"
+              class="position-absolute w-100 h-100 top-0 end-0 start-0 bottom-0 opacity-none z-10 cursor">
+            <img alt="search" src="assets/img/Vector.svg">
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   <!-- header -->
   <header class="py-3">
     <!-- overlay -->
-    <div id="overlay" class="position-fixed end-0 top-0 start-0 bottom-0"></div>
+    <div id="overlay" class="position-fixed end-0 top-0 start-0 bottom-0 d-lg-none"></div>
     <div class="d-flex container align-items-center gap-4 justify-content-between">
       <!-- ham icon -->
       <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
@@ -49,9 +72,9 @@
           </nav>
         </div>
       </div>
-      <!-- language && login -->
+      <!-- language && login && search -->
       <div class="d-flex align-items-center gap-3">
-        <div
+        <div data-bs-toggle="modal" data-bs-target="#searchModal"
           class="bg-orange d-none d-sm-flex cursor rounded-circle w-37 h-37 py-1 px-2 border align-items-center justify-content-center">
           <img alt="search" src="assets/img/Vector.svg">
         </div>
@@ -81,10 +104,14 @@
     <!-- mobile search -->
     <div class="container mt-3">
       <div
-      class="bg-orange d-flex d-sm-none cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
-      <input class="form-control bg-transparent border-0 focus-none">
-      <img alt="search" src="assets/img/Vector.svg">
-    </div>
+        class="bg-orange d-flex d-sm-none cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
+        <input type="search" placeholder="جستجو..." class="form-control bg-transparent border-0 focus-none">
+        <div class="position-relative cursor">
+          <input type="submit"
+            class="position-absolute w-100 h-100 top-0 end-0 start-0 bottom-0 opacity-none z-10 cursor">
+          <img alt="search" src="assets/img/Vector.svg">
+        </div>
+      </div>
     </div>
   </header>
 
@@ -809,7 +836,7 @@
         class="d-flex flex-column flex-lg-row gap-2 text-center text-lg-end align-items-center justify-content-between text-secondary fs-7 fw-bold py-3 border-top">
         <p class="mb-0">کلیه حقوق این سایت متعلق به سامانه جامع اجرایی معادن کشور می باشد.</p>
         <p class="mb-0">2021-2022 © | شرایط و ضوابط . سیاست حفظ حریم خصوصی</p>
-        <p class="mb-0">توسعه و پیاده سازی شرکت نرم افزاری رایان سپهر هامان</p>
+        <p class="mb-0">توسعه و پیاده سازی شرکت نرم افزاری <a class="font-bold text-orange">رایان سپهر هامان</a></p>
       </div>
     </div>
   </footer>

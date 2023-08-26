@@ -12,62 +12,108 @@
 </head>
 
 <body>
-  <!-- header -->
-  <header class="py-3">
-    <div class="d-flex container align-items-lg-center gap-4 flex-column flex-lg-row justify-content-lg-between">
-      <div class="d-flex flex-column flex-md-row align-items-center gap-3">
-        <div class="d-flex align-items-center gap-4 justify-content-between w-100">
-          <!-- logo -->
-          <svg id="openSidebar" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
-            class="bi bi-list d-lg-none cursor flex-shrink-0" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-          </svg>
-          <a>
-            <img alt="logo" src="assets/img/Frame 9249.png">
-          </a>
-          <!-- nav -->
-          <nav>
-            <ul class="list-unstyled m-0 p-0 d-flex align-items-center gap-4 text-secondary fw-bold">
-              <li><a>اداری معدنی</a></li>
-              <li><a>فنی مهندسی</a></li>
-              <li><a>پیمانکاری معدن</a></li>
-              <li><a>درباره ما</a></li>
-              <li><a>تماس با ما</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <!-- language && login -->
-      <div class="d-flex align-items-center gap-3">
-        <div
-          class="bg-orange cursor rounded-circle w-37 h-37 py-1 px-2 border d-flex align-items-center justify-content-center">
-          <img alt="search" src="assets/img/Vector.svg">
-        </div>
-        <div class="language position-relative cursor">
-          <div class="d-flex align-items-center gap-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-            <img alt="language" src="assets/img/artwork.png">
-            <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
+  
+
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div
+            class="d-flex cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
+            <input type="search" placeholder="جستجو..." class="form-control bg-transparent border-0 focus-none">
+            <div class="position-relative cursor">
+              <input type="submit"
+                class="position-absolute w-100 h-100 top-0 end-0 start-0 bottom-0 opacity-none z-10 cursor">
+              <img alt="search" src="assets/img/Vector.svg">
+            </div>
           </div>
-          <ul class="dropdown-menu p-0 m-0 font-bold bg-white shadow-sm rounded-4">
-            <li class="d-flex align-items-center justify-content-center py-3 gap-3 border-bottom">
-              <img alt="language" src="assets/img/artwork.png">
-              <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
-            </li>
-            <li class="d-flex align-items-center justify-content-center py-3 gap-3">
-              <img alt="language" src="assets/img/artwork.png">
-              <p class="mb-0 fw-bold fs-7 text-secondary">English</p>
-            </li>
-          </ul>
+          </div>
         </div>
-        <a
-          class="btn btn-info py-2 px-3 d-flex align-items-center font-bold text-white justify-content-center gap-2 fs-7">
-          <img alt="login" src="assets/img/login.svg" class="w-15">
-          <span>ثبت نام / ورود</span>
-        </a>
       </div>
     </div>
-  </header>
+  
+  
+  
+    <!-- header -->
+    <header class="py-3">
+      <!-- overlay -->
+      <div id="overlay" class="position-fixed end-0 top-0 start-0 bottom-0 d-lg-none"></div>
+      <div class="d-flex container align-items-center gap-4 justify-content-between">
+        <!-- ham icon -->
+        <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
+          class="bi bi-list d-xl-none cursor flex-shrink-0" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+        <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+          <div class="d-flex align-items-center gap-4 justify-content-between w-100">
+            <!-- logo -->
+            <a>
+              <img alt="logo" src="assets/img/Frame 9249.png">
+            </a>
+            <!-- nav -->
+            <nav>
+              <ul
+                class="list-unstyled m-0 p-xl-0 p-3 d-flex flex-column flex-xl-row align-items-xl-center gap-4 text-secondary fw-bold">
+                <li><a>اداری معدنی</a></li>
+                <li><a>فنی مهندسی</a></li>
+                <li><a>پیمانکاری معدن</a></li>
+                <li><a>درباره ما</a></li>
+                <li><a>تماس با ما</a></li>
+                <li>
+                  <a
+                    class="btn btn-info py-2 px-3 d-xl-none d-flex align-items-center font-bold text-white justify-content-center gap-2 fs-7">
+                    <img alt="login" src="assets/img/login.svg" class="w-15">
+                    <span>ثبت نام / ورود</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- language && login && search -->
+        <div class="d-flex align-items-center gap-3">
+          <div data-bs-toggle="modal" data-bs-target="#searchModal"
+            class="bg-orange d-none d-sm-flex cursor rounded-circle w-37 h-37 py-1 px-2 border align-items-center justify-content-center">
+            <img alt="search" src="assets/img/Vector.svg">
+          </div>
+          <div class="language position-relative cursor">
+            <div class="d-flex align-items-center gap-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              <img alt="language" src="assets/img/artwork.png">
+              <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
+            </div>
+            <ul class="dropdown-menu p-0 m-0 font-bold bg-white shadow-sm rounded-4">
+              <li class="d-flex align-items-center justify-content-center py-3 gap-3 border-bottom">
+                <img alt="language" src="assets/img/artwork.png">
+                <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
+              </li>
+              <li class="d-flex align-items-center justify-content-center py-3 gap-3">
+                <img alt="language" src="assets/img/artwork.png">
+                <p class="mb-0 fw-bold fs-7 text-secondary">English</p>
+              </li>
+            </ul>
+          </div>
+          <a
+            class="btn btn-info py-2 px-3 d-xl-flex d-none align-items-center font-bold text-white justify-content-center gap-2 fs-7">
+            <img alt="login" src="assets/img/login.svg" class="w-15">
+            <span>ثبت نام / ورود</span>
+          </a>
+        </div>
+      </div>
+      <!-- mobile search -->
+      <div class="container mt-3">
+        <div
+          class="bg-orange d-flex d-sm-none cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
+          <input type="search" placeholder="جستجو..." class="form-control bg-transparent border-0 focus-none">
+          <div class="position-relative cursor">
+            <input type="submit"
+              class="position-absolute w-100 h-100 top-0 end-0 start-0 bottom-0 opacity-none z-10 cursor">
+            <img alt="search" src="assets/img/Vector.svg">
+          </div>
+        </div>
+      </div>
+    </header>
 
   <!-- main -->
   <main>
@@ -86,7 +132,7 @@
     <section>
       <div class="container position-relative">
         <div class="row g-4 align-items-center">
-          <div class="col-lg-6">
+          <div class="col-lg-6 order-1 order-lg-0">
             <h3 class="font-bold after text-gray">امور اداری</h3>
             <p class="fw-bold mt-5 mb-2 lh-lg">
               سجامک با بهره‌گیری از تیم متخصص و تجهیزات پیشرفته،
@@ -95,7 +141,7 @@
               به بهره‌وری بیشتر، کاهش هزینه‌ها و افزایش سودآوری صنعت معدن کمک می‌کند.
             </p>
             <a
-              class="arrow-link border-dark border rounded-4 text-dark mt-5 me-5 py-3 d-flex align-items-center justify-content-center w-30">
+              class="arrow-link border-dark border rounded-4 text-dark mt-5 me-auto ms-auto me-lg-5 py-3 d-flex align-items-center justify-content-center w-30">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                 class="bi bi-arrow-down" viewBox="0 0 16 16">
                 <path fill-rule="evenodd"
@@ -103,7 +149,7 @@
               </svg>
             </a>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 order-0 order-lg-1">
             <img alt="banner" src="assets/img/Group 13082.png" class="img-fluid">
           </div>
         </div>
@@ -176,7 +222,7 @@
     <!-- moshavere -->
     <section class="py-5 bg-gray">
       <div class="container">
-        <div class="bg-white rounded-4 shadow-sm d-flex align-items-center justify-content-between py-5 px-4">
+        <div class="bg-white rounded-4 shadow-sm d-flex flex-column flex-xl-row gap-4 align-items-center justify-content-between py-5 px-4">
           <div>
             <div class="after before pe-4">
               <h5 class="font-bold mb-1">استعلامات چندگانه ثبت معدن</h5>
@@ -264,7 +310,7 @@
             <h2 class="accordion-header">
               <button class="accordion-button d-flex align-items-center gap-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 <img alt="accordion" src="assets/img/message-question.svg">
-                <p class="mb-0 text-gray">سجامک چیست؟</p>
+                <p class="mb-0 text-gray text-end">سجامک چیست؟</p>
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -277,7 +323,7 @@
             <h2 class="accordion-header">
               <button class="accordion-button d-flex align-items-center gap-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                 <img alt="accordion" src="assets/img/message-question.svg">
-                <p class="mb-0 text-gray">چگونه می توانم در سجامک ثبت نام کنم؟</p>
+                <p class="mb-0 text-gray text-end">چگونه می توانم در سجامک ثبت نام کنم؟</p>
               </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -290,7 +336,7 @@
             <h2 class="accordion-header">
               <button class="accordion-button d-flex align-items-center gap-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                 <img alt="accordion" src="assets/img/message-question.svg">
-                <p class="mb-0 text-gray">آیا ثبت نام در سجامک کاملا رایگان است؟</p>
+                <p class="mb-0 text-gray text-end">آیا ثبت نام در سجامک کاملا رایگان است؟</p>
               </button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -377,10 +423,11 @@
           </ul>
         </div>
       </div>
-      <div class="d-flex align-items-center justify-content-between text-secondary fs-7 fw-bold py-3 border-top">
+      <div
+        class="d-flex flex-column flex-lg-row gap-2 text-center text-lg-end align-items-center justify-content-between text-secondary fs-7 fw-bold py-3 border-top">
         <p class="mb-0">کلیه حقوق این سایت متعلق به سامانه جامع اجرایی معادن کشور می باشد.</p>
         <p class="mb-0">2021-2022 © | شرایط و ضوابط . سیاست حفظ حریم خصوصی</p>
-        <p class="mb-0">توسعه و پیاده سازی شرکت نرم افزاری رایان سپهر هامان</p>
+        <p class="mb-0">توسعه و پیاده سازی شرکت نرم افزاری <a class="font-bold text-orange">رایان سپهر هامان</a></p>
       </div>
     </div>
   </footer>

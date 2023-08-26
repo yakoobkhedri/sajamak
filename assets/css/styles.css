@@ -40,6 +40,9 @@ body {
 .bg-orange {
     background-color: #FFA800;
 }
+.text-orange {
+    color: #FFA800;
+}
 
 .text-gray {
     color: #1F2A37;
@@ -153,7 +156,7 @@ a {
     right: 0;
     bottom: -8px;
 }
-.service.benefit:hover::after {
+.service:hover::after {
     content: url('../img/Polygon\ 44.svg');
 }
 

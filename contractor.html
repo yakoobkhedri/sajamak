@@ -12,36 +12,70 @@
 </head>
 
 <body>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div
+            class="d-flex cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
+            <input type="search" placeholder="جستجو..." class="form-control bg-transparent border-0 focus-none">
+            <div class="position-relative cursor">
+              <input type="submit"
+                class="position-absolute w-100 h-100 top-0 end-0 start-0 bottom-0 opacity-none z-10 cursor">
+              <img alt="search" src="assets/img/Vector.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   <!-- header -->
   <header class="py-3">
-    <div class="d-flex container align-items-lg-center gap-4 flex-column flex-lg-row justify-content-lg-between">
+    <!-- overlay -->
+    <div id="overlay" class="position-fixed end-0 top-0 start-0 bottom-0 d-lg-none"></div>
+    <div class="d-flex container align-items-center gap-4 justify-content-between">
+      <!-- ham icon -->
+      <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
+        class="bi bi-list d-xl-none cursor flex-shrink-0" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+      </svg>
       <div class="d-flex flex-column flex-md-row align-items-center gap-3">
         <div class="d-flex align-items-center gap-4 justify-content-between w-100">
           <!-- logo -->
-          <svg id="openSidebar" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
-            class="bi bi-list d-lg-none cursor flex-shrink-0" viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-          </svg>
           <a>
             <img alt="logo" src="assets/img/Frame 9249.png">
           </a>
           <!-- nav -->
           <nav>
-            <ul class="list-unstyled m-0 p-0 d-flex align-items-center gap-4 text-secondary fw-bold">
+            <ul
+              class="list-unstyled m-0 p-xl-0 p-3 d-flex flex-column flex-xl-row align-items-xl-center gap-4 text-secondary fw-bold">
               <li><a>اداری معدنی</a></li>
               <li><a>فنی مهندسی</a></li>
               <li><a>پیمانکاری معدن</a></li>
               <li><a>درباره ما</a></li>
               <li><a>تماس با ما</a></li>
+              <li>
+                <a
+                  class="btn btn-info py-2 px-3 d-xl-none d-flex align-items-center font-bold text-white justify-content-center gap-2 fs-7">
+                  <img alt="login" src="assets/img/login.svg" class="w-15">
+                  <span>ثبت نام / ورود</span>
+                </a>
+              </li>
             </ul>
           </nav>
         </div>
       </div>
-      <!-- language && login -->
+      <!-- language && login && search -->
       <div class="d-flex align-items-center gap-3">
-        <div
-          class="bg-orange cursor rounded-circle w-37 h-37 py-1 px-2 border d-flex align-items-center justify-content-center">
+        <div data-bs-toggle="modal" data-bs-target="#searchModal"
+          class="bg-orange d-none d-sm-flex cursor rounded-circle w-37 h-37 py-1 px-2 border align-items-center justify-content-center">
           <img alt="search" src="assets/img/Vector.svg">
         </div>
         <div class="language position-relative cursor">
@@ -61,10 +95,22 @@
           </ul>
         </div>
         <a
-          class="btn btn-info py-2 px-3 d-flex align-items-center font-bold text-white justify-content-center gap-2 fs-7">
+          class="btn btn-info py-2 px-3 d-xl-flex d-none align-items-center font-bold text-white justify-content-center gap-2 fs-7">
           <img alt="login" src="assets/img/login.svg" class="w-15">
           <span>ثبت نام / ورود</span>
         </a>
+      </div>
+    </div>
+    <!-- mobile search -->
+    <div class="container mt-3">
+      <div
+        class="bg-orange d-flex d-sm-none cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
+        <input type="search" placeholder="جستجو..." class="form-control bg-transparent border-0 focus-none">
+        <div class="position-relative cursor">
+          <input type="submit"
+            class="position-absolute w-100 h-100 top-0 end-0 start-0 bottom-0 opacity-none z-10 cursor">
+          <img alt="search" src="assets/img/Vector.svg">
+        </div>
       </div>
     </div>
   </header>
@@ -86,7 +132,7 @@
     <section>
       <div class="container position-relative">
         <div class="row g-4 align-items-center">
-          <div class="col-lg-6">
+          <div class="col-lg-6 order-1 order-lg-0">
             <h3 class="font-bold after text-gray">پیمانکاری معادن</h3>
             <p class="fw-bold mt-5 mb-2 lh-lg">
               سجامک با بهره‌گیری از تیم متخصص و تجهیزات پیشرفته،
@@ -96,7 +142,7 @@
             </p>
             <a class="btn btn-info text-white fw-bold mt-5 d-table me-auto">ثبت پیمانکاری</a>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 order-0 order-lg-1">
             <img alt="banner" src="assets/img/pngkit_caterpillar-png_1505520 2.png"
               class="img-fluid w-100 mx-auto d-block">
           </div>
@@ -330,53 +376,64 @@
     <!-- services -->
     <section class="bg-gray py-5">
       <div class="container">
-          <h5 class="font-bold before text-center single">مزایای پیمانکاری سجامک</h5>
-          <p class="text-center mt-3 w-50 mx-auto">
-            پیمانکاری معادن یکی از حوزه‌های مهم کسب و کار در صنعت معدن است که در آن پیمانکاران به منظور انجام کارهای مختلف در معادن با شرکت‌ها و یا مالکین معادن قرارداد می‌بندند. مزایای پیمانکاری معادن به شرح زیر است:
-          </p>
+        <h5 class="font-bold before text-center single">مزایای پیمانکاری سجامک</h5>
+        <p class="text-center mt-3 w-50 mx-auto">
+          پیمانکاری معادن یکی از حوزه‌های مهم کسب و کار در صنعت معدن است که در آن پیمانکاران به منظور انجام کارهای مختلف
+          در معادن با شرکت‌ها و یا مالکین معادن قرارداد می‌بندند. مزایای پیمانکاری معادن به شرح زیر است:
+        </p>
         <div class="d-flex align-items-center justify-content-between flex-column flex-lg-row gap-4 font-bold mt-4">
           <div>
-            <a class="bg-white text-center d-block text-secondary rounded-3 py-4 px-3 service benefit transition position-relative">
+            <a
+              class="bg-white text-center d-block text-secondary rounded-3 py-4 px-3 service benefit transition position-relative">
               <img alt="services" src="assets/img/Decrease.png" class="img-fluid d-block mx-auto">
               <p class="fw-bold mt-1 mb-3">کاهش هزینه‌ها
               </p>
-              <p class="fs-14 text-end text-secondary">پیمانکاران به دلیل حجم کار،امکان تأمین مواد اولیه و تجهیزات با قیمت بهتر را دارند. و همچنین می‌توانند به طور موثرتری از منابع خود استفاده کنند و تولید را بهینه کنند.
+              <p class="fs-14 text-end text-secondary">پیمانکاران به دلیل حجم کار،امکان تأمین مواد اولیه و تجهیزات با
+                قیمت بهتر را دارند. و همچنین می‌توانند به طور موثرتری از منابع خود استفاده کنند و تولید را بهینه کنند.
               </p>
             </a>
           </div>
           <div>
-            <a class="bg-white text-center d-block text-secondary rounded-3 py-4 px-3 service benefit transition position-relative">
+            <a
+              class="bg-white text-center d-block text-secondary rounded-3 py-4 px-3 service benefit transition position-relative">
               <img alt="services" src="assets/img/Development Skill.png" class="img-fluid d-block mx-auto">
               <p class="fw-bold mt-1 mb-3">تخصص و تجربه
               </p>
-              <p class="fs-14 text-end text-secondary">پیمانکاران به دلیل حجم کار،امکان تأمین مواد اولیه و تجهیزات با قیمت بهتر را دارند. و همچنین می‌توانند به طور موثرتری از منابع خود استفاده کنند و تولید را بهینه کنند.
+              <p class="fs-14 text-end text-secondary">پیمانکاران به دلیل حجم کار،امکان تأمین مواد اولیه و تجهیزات با
+                قیمت بهتر را دارند. و همچنین می‌توانند به طور موثرتری از منابع خود استفاده کنند و تولید را بهینه کنند.
               </p>
             </a>
           </div>
           <div>
-            <a class="bg-white text-center d-block text-secondary rounded-3 py-4 px-3 service benefit transition position-relative">
+            <a
+              class="bg-white text-center d-block text-secondary rounded-3 py-4 px-3 service benefit transition position-relative">
               <img alt="services" src="assets/img/Increase.png" class="img-fluid d-block mx-auto">
               <p class="fw-bold mt-1 mb-3">افزایش بهره وری
               </p>
-              <p class="fs-14 text-end text-secondary">پیمانکاران به دلیل حجم کار،امکان تأمین مواد اولیه و تجهیزات با قیمت بهتر را دارند. و همچنین می‌توانند به طور موثرتری از منابع خود استفاده کنند و تولید را بهینه کنند.
+              <p class="fs-14 text-end text-secondary">پیمانکاران به دلیل حجم کار،امکان تأمین مواد اولیه و تجهیزات با
+                قیمت بهتر را دارند. و همچنین می‌توانند به طور موثرتری از منابع خود استفاده کنند و تولید را بهینه کنند.
               </p>
             </a>
           </div>
           <div>
-            <a class="bg-white text-center d-block text-secondary rounded-3 py-4 px-3 service benefit transition position-relative">
+            <a
+              class="bg-white text-center d-block text-secondary rounded-3 py-4 px-3 service benefit transition position-relative">
               <img alt="services" src="assets/img/Error.png" class="img-fluid d-block mx-auto">
               <p class="fw-bold mt-1 mb-3">کاهش خطرات
               </p>
-              <p class="fs-14 text-end text-secondary">پیمانکاران به دلیل حجم کار،امکان تأمین مواد اولیه و تجهیزات با قیمت بهتر را دارند. و همچنین می‌توانند به طور موثرتری از منابع خود استفاده کنند و تولید را بهینه کنند.
+              <p class="fs-14 text-end text-secondary">پیمانکاران به دلیل حجم کار،امکان تأمین مواد اولیه و تجهیزات با
+                قیمت بهتر را دارند. و همچنین می‌توانند به طور موثرتری از منابع خود استفاده کنند و تولید را بهینه کنند.
               </p>
             </a>
           </div>
           <div>
-            <a class="bg-white text-center d-block text-secondary rounded-3 py-4 px-3 service benefit transition position-relative">
+            <a
+              class="bg-white text-center d-block text-secondary rounded-3 py-4 px-3 service benefit transition position-relative">
               <img alt="services" src="assets/img/Ability To Handle Surprises.png" class="img-fluid d-block mx-auto">
               <p class="fw-bold mt-1 mb-3">افزایش توانمندی
               </p>
-              <p class="fs-14 text-end text-secondary">پیمانکاران به دلیل حجم کار،امکان تأمین مواد اولیه و تجهیزات با قیمت بهتر را دارند. و همچنین می‌توانند به طور موثرتری از منابع خود استفاده کنند و تولید را بهینه کنند.
+              <p class="fs-14 text-end text-secondary">پیمانکاران به دلیل حجم کار،امکان تأمین مواد اولیه و تجهیزات با
+                قیمت بهتر را دارند. و همچنین می‌توانند به طور موثرتری از منابع خود استفاده کنند و تولید را بهینه کنند.
               </p>
             </a>
           </div>
@@ -563,7 +620,7 @@
     <!-- moshavere -->
     <section class="py-5 bg-gray">
       <div class="container">
-        <div class="bg-white rounded-4 shadow-sm d-flex align-items-center justify-content-between py-5 px-4">
+        <div class="bg-white rounded-4 shadow-sm d-flex flex-column flex-xl-row gap-4 align-items-center justify-content-between py-5 px-4">
           <div>
             <div class="after before pe-4">
               <h5 class="font-bold mb-1">پیمانکاری و ماشین آلات معدنی</h5>
@@ -819,8 +876,7 @@
             </div>
             <div class="swiper-slide border rounded-4">
               <div class="pt-5 machine-img-box">
-                <img alt="banner" src="assets/img/image 40.png"
-                  class="img-fluid w-75 d-block mx-auto">
+                <img alt="banner" src="assets/img/image 40.png" class="img-fluid w-75 d-block mx-auto">
               </div>
               <div class="p-3">
                 <a class="after font-bold text-dark d-table">دامپتراک</a>
@@ -838,8 +894,7 @@
             </div>
             <div class="swiper-slide border rounded-4">
               <div class="pt-5 machine-img-box">
-                <img alt="banner" src="assets/img/image 41.png"
-                  class="img-fluid w-75 d-block mx-auto">
+                <img alt="banner" src="assets/img/image 41.png" class="img-fluid w-75 d-block mx-auto">
               </div>
               <div class="p-3">
                 <a class="after font-bold text-dark d-table">میکسر</a>
@@ -857,8 +912,7 @@
             </div>
             <div class="swiper-slide border rounded-4">
               <div class="pt-5 machine-img-box">
-                <img alt="banner" src="assets/img/image 43.png"
-                  class="img-fluid w-75 d-block mx-auto">
+                <img alt="banner" src="assets/img/image 43.png" class="img-fluid w-75 d-block mx-auto">
               </div>
               <div class="p-3">
                 <a class="after font-bold text-dark d-table">تله هندلر</a>
@@ -895,8 +949,7 @@
             </div>
             <div class="swiper-slide border rounded-4">
               <div class="pt-5 machine-img-box">
-                <img alt="banner" src="assets/img/image 40.png"
-                  class="img-fluid w-75 d-block mx-auto">
+                <img alt="banner" src="assets/img/image 40.png" class="img-fluid w-75 d-block mx-auto">
               </div>
               <div class="p-3">
                 <a class="after font-bold text-dark d-table">دامپتراک</a>
@@ -914,8 +967,7 @@
             </div>
             <div class="swiper-slide border rounded-4">
               <div class="pt-5 machine-img-box">
-                <img alt="banner" src="assets/img/image 41.png"
-                  class="img-fluid w-75 d-block mx-auto">
+                <img alt="banner" src="assets/img/image 41.png" class="img-fluid w-75 d-block mx-auto">
               </div>
               <div class="p-3">
                 <a class="after font-bold text-dark d-table">میکسر</a>
@@ -933,8 +985,7 @@
             </div>
             <div class="swiper-slide border rounded-4">
               <div class="pt-5 machine-img-box">
-                <img alt="banner" src="assets/img/image 43.png"
-                  class="img-fluid w-75 d-block mx-auto">
+                <img alt="banner" src="assets/img/image 43.png" class="img-fluid w-75 d-block mx-auto">
               </div>
               <div class="p-3">
                 <a class="after font-bold text-dark d-table">تله هندلر</a>
@@ -1011,7 +1062,7 @@
               <button class="accordion-button d-flex align-items-center gap-4" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 <img alt="accordion" src="assets/img/message-question.svg">
-                <p class="mb-0 text-gray">سجامک چیست؟</p>
+                <p class="mb-0 text-gray text-end">سجامک چیست؟</p>
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
@@ -1027,7 +1078,7 @@
                 data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                 aria-controls="collapseTwo">
                 <img alt="accordion" src="assets/img/message-question.svg">
-                <p class="mb-0 text-gray">چگونه می توانم در سجامک ثبت نام کنم؟</p>
+                <p class="mb-0 text-gray text-end">چگونه می توانم در سجامک ثبت نام کنم؟</p>
               </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -1043,7 +1094,7 @@
                 data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                 aria-controls="collapseThree">
                 <img alt="accordion" src="assets/img/message-question.svg">
-                <p class="mb-0 text-gray">آیا ثبت نام در سجامک کاملا رایگان است؟</p>
+                <p class="mb-0 text-gray text-end">آیا ثبت نام در سجامک کاملا رایگان است؟</p>
               </button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
@@ -1131,10 +1182,11 @@
           </ul>
         </div>
       </div>
-      <div class="d-flex align-items-center justify-content-between text-secondary fs-7 fw-bold py-3 border-top">
+      <div
+        class="d-flex flex-column flex-lg-row gap-2 text-center text-lg-end align-items-center justify-content-between text-secondary fs-7 fw-bold py-3 border-top">
         <p class="mb-0">کلیه حقوق این سایت متعلق به سامانه جامع اجرایی معادن کشور می باشد.</p>
         <p class="mb-0">2021-2022 © | شرایط و ضوابط . سیاست حفظ حریم خصوصی</p>
-        <p class="mb-0">توسعه و پیاده سازی شرکت نرم افزاری رایان سپهر هامان</p>
+        <p class="mb-0">توسعه و پیاده سازی شرکت نرم افزاری <a class="font-bold text-orange">رایان سپهر هامان</a></p>
       </div>
     </div>
   </footer>
