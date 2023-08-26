@@ -266,10 +266,22 @@ footer .arrow-link {
 
 @media only screen and (max-width:1200px) {}
 
-@media only screen and (max-width:992px) {}
+@media only screen and (max-width:992px) {
+    .machine-img-box {
+        height: 235px;
+      }
+}
 
-@media only screen and (max-width:768px) {}
+@media only screen and (max-width:768px) {
+    .machine-img-box {
+        height: 201px;
+      }
+}
 
-@media only screen and (max-width:576px) {}
+@media only screen and (max-width:576px) {
+    .machine-img-box {
+        height: auto;
+      }
+}
 
 @media only screen and (max-width:400px) {}
