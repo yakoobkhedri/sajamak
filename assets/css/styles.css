@@ -141,6 +141,10 @@ a {
 .before.single::before {
     right: -247px;
 }
+.before.right-331::before {
+    right:-331px;
+    left: 0;
+}
 
 .overlay::after {
     content: '';
