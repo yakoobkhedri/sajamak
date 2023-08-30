@@ -1,20 +1,20 @@
 @font-face {
-    font-family: "parastoo-Regular";
-    src: url('../fonts/web/Farsi-Digits-Without-Latin/Parastoo-FD-WOL.ttf') format("truetype");
+    font-family: "IRANSans-Regular";
+    src: url('../fonts/IRANSansXFaNum-Regular.woff') format("woff");
 }
 
 @font-face {
-    font-family: "parastoo-Bold";
-    src: url('../fonts/web/Farsi-Digits-Without-Latin/Parastoo-Bold-FD-WOL.ttf') format("truetype");
+    font-family: "IRANSans-Bold";
+    src: url('../fonts/IRANSansXFaNum-Bold.woff') format("woff");
 }
 
 body {
-    font-family: "parastoo-Regular";
+    font-family: "IRANSans-Regular";
     user-select: none;
 }
 
 .font-bold {
-    font-family: "parastoo-Bold";
+    font-family: "IRANSans-Bold";
 }
 
 .cursor {
