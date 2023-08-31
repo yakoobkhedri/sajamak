@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
   <link rel='stylesheet' type='text/css' media='screen' href='assets/css/styles.css'>
-  <title>تکمیل اطلاعات</title>
+  <title>اطلاعات پیمانکار</title>
 </head>
 
 <body>
@@ -22,14 +22,14 @@
         <a>
           <img alt="logo" src="assets/img/Frame 9249.png">
         </a>
-        <h3 class="font-bold mb-5 mt-4">تکمیل اطلاعات</h3>
+        <h3 class="font-bold mb-5 mt-4">اطلاعات پیمانکار</h3>
         <ul class="nav nav-tabs p-0" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
             <label class="fs-14 pe-0 text-secondary font-bold cursor nav-link active" id="mine-tab" data-bs-toggle="tab"
               data-bs-target="#mine-tab-pane" type="button" role="tab" aria-controls="mine-tab-pane"
               aria-selected="true">
-              <input type="radio" checked name="role" class="form-check-input cursor ms-2">
-              مالک معدن
+              <input type="radio" name="role" class="form-check-input cursor ms-2" checked>
+             شخص حقوقی
             </label>
           </li>
           <li class="nav-item" role="presentation">
@@ -37,29 +37,23 @@
               data-bs-target="#contractor-tab-pane" type="button" role="tab" aria-controls="contractor-tab-pane"
               aria-selected="true">
               <input type="radio" name="role" class="form-check-input cursor ms-2">
-              پیمانکار
+              شخص حقیقی
             </label>
           </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-          <form action="complete-info2.html" class="row mt-2 g-4 font-bold mb-4 tab-pane fade show active" id="mine-tab-pane" role="tabpanel"
+          <form class="row mt-2 g-4 font-bold mb-4 tab-pane fade show active" id="mine-tab-pane" role="tabpanel"
             aria-labelledby="mine-tab" tabindex="0">
             <div class="col-12 px-0">
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">کدملی</label>
-                <input placeholder="5479874389" class="form-control">
+                <label for="exampleInputEmail1" class="form-label">نام شرکت</label>
+                <input placeholder="سازه گستر عرشیا" class="form-control">
               </div>
             </div>
             <div class="col-12 px-0">
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">نام</label>
-                <input placeholder="صابر" class="form-control">
-              </div>
-            </div>
-            <div class="col-12 px-0">
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">نام و نام خانوادگی</label>
-                <input placeholder="علی نژاد" class="form-control">
+                <label for="exampleInputEmail1" class="form-label">نام و نام خانوادگی مدیر شرکت</label>
+                <input placeholder="صابر علی نژاد" class="form-control">
               </div>
             </div>
             <div class="d-flex align-items-center gap-4 justify-content-between px-0">
@@ -88,28 +82,17 @@
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">آدرس دقیق</label>
                 <textarea rows="5" class="form-control">شهر رفسنجان، میدان امیرکبیر، بلوار عدالت ، خیابان بنفشه کوچه 12 ، پلاک 18 </textarea>
+                <iframe class="w-100 mt-3 border rounded-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220240.14394223547!2d56.1318009206856!3d30.400584304820242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f00f72985c74307%3A0xe480884c1645479b!2z2LHZgdiz2YbYrNin2YbYjCDYp9iz2KrYp9mGINqp2LHZhdin2YY!5e0!3m2!1sfa!2s!4v1692096953943!5m2!1sfa!2s" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
-            <input type="submit" value="ثبت اطلاعات" class="btn text-white font-bold py-2 w-100 bg-info">
+            <input type="submit" value="تکمیل ثبت نام" class="btn text-white font-bold py-2 w-100 bg-gray2">
           </form>
-          <form action="complete-info2.html" class="row mt-2 g-4 font-bold mb-4 tab-pane fade" id="contractor-tab-pane" role="tabpanel"
+          <form class="row mt-2 g-4 font-bold mb-4 tab-pane fade" id="contractor-tab-pane" role="tabpanel"
             aria-labelledby="contractor-tab" tabindex="0">
             <div class="col-12 px-0">
               <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">کدملی</label>
-                <input placeholder="5479874389" class="form-control">
-              </div>
-            </div>
-            <div class="col-12 px-0">
-              <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">نام</label>
-                <input placeholder="صابر" class="form-control">
-              </div>
-            </div>
-            <div class="col-12 px-0">
-              <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">نام و نام خانوادگی</label>
-                <input placeholder="علی نژاد" class="form-control">
+                <input placeholder="صابر علی نژاد" class="form-control">
               </div>
             </div>
             <div class="d-flex align-items-center gap-4 justify-content-between px-0">
@@ -138,9 +121,10 @@
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">آدرس دقیق</label>
                 <textarea rows="5" class="form-control">شهر رفسنجان، میدان امیرکبیر، بلوار عدالت ، خیابان بنفشه کوچه 12 ، پلاک 18 </textarea>
+                <iframe class="w-100 mt-3 border rounded-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220240.14394223547!2d56.1318009206856!3d30.400584304820242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f00f72985c74307%3A0xe480884c1645479b!2z2LHZgdiz2YbYrNin2YbYjCDYp9iz2KrYp9mGINqp2LHZhdin2YY!5e0!3m2!1sfa!2s!4v1692096953943!5m2!1sfa!2s" height="280" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
-            <input type="submit" value="ثبت اطلاعات" class="btn text-white font-bold py-2 w-100 bg-info">
+            <input type="submit" value="تکمیل ثبت نام" class="btn text-white font-bold py-2 w-100 bg-gray2">
           </form>
         </div>
       </div>
