@@ -249,7 +249,15 @@ a {
 .accordion-button:not(.collapsed)::after {
     filter: contrast(0%);
 }
-
+.nav-tabs{
+    border-bottom: none;
+}
+.nav-tabs .nav-link.active,.nav-tabs .nav-link:hover{
+    border-color: transparent;
+}
+.nav-tabs .nav-link{
+    z-index: 22;
+}
 /* machines */
 .machine-img-box {
     height: 199px;

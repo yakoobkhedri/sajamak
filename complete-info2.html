@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel='stylesheet' type='text/css' media='screen' href='assets/css/styles.css'>
+  <title>تکمیل اطلاعات</title>
+</head>
+
+<body>
+
+  <!-- main -->
+  <main>
+
+    <div class="row mx-0">
+      <div class="col-lg-6 px-5 py-3">
+        <!-- logo -->
+        <a>
+          <img alt="logo" src="assets/img/Frame 9249.png">
+        </a>
+        <h3 class="font-bold mb-5 mt-4">تکمیل اطلاعات</h3>
+        <ul class="nav nav-tabs p-0" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <label class="fs-14 pe-0 text-secondary font-bold cursor nav-link active" id="mine-tab" data-bs-toggle="tab"
+              data-bs-target="#mine-tab-pane" type="button" role="tab" aria-controls="mine-tab-pane"
+              aria-selected="true">
+              <input type="radio" checked name="role" class="form-check-input cursor ms-2">
+              مالک معدن
+            </label>
+          </li>
+          <li class="nav-item" role="presentation">
+            <label class="fs-14 text-secondary font-bold cursor nav-link" id="contractor-tab" data-bs-toggle="tab"
+              data-bs-target="#contractor-tab-pane" type="button" role="tab" aria-controls="contractor-tab-pane"
+              aria-selected="true">
+              <input type="radio" name="role" class="form-check-input cursor ms-2">
+              پیمانکار
+            </label>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <form class="row mt-2 g-4 font-bold mb-4 tab-pane fade show active" id="mine-tab-pane" role="tabpanel"
+            aria-labelledby="mine-tab" tabindex="0">
+            <div class="col-12 px-0">
+              <div class="mb-2">
+                <label for="exampleInputEmail1" class="form-label">نوع مواد معدنی</label>
+                <select class="form-select">
+                  <option>فلزی</option>
+                  <option>آهک</option>
+                  <option>سنگ</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 px-0">
+              <div class="mb-2">
+                <label for="exampleInputEmail1" class="form-label">مواد و محصولات معدن</label>
+                <select class="form-select">
+                  <option>مس</option>
+                  <option>نیکل</option>
+                  <option>کبالت</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 px-0">
+              <div class="mb-2">
+                <label for="exampleInputEmail1" class="form-label">وضعیت پیشرفت معدن</label>
+                <select class="form-select">
+                  <option>شناسایی</option>
+                  <option>اکتشاف</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 px-0">
+              <div class="mb-2">
+                <label for="exampleInputEmail1" class="form-label">وضعیت مجوز</label>
+                <select class="form-select">
+                  <option>دارد</option>
+                  <option>ندارد</option>
+                </select>
+              </div>
+            </div>
+            <input type="submit" value="تایید و ادامه" class="btn text-white font-bold py-2 w-100 bg-gray2">
+          </form>
+          <form class="row mt-2 g-4 font-bold mb-4 tab-pane fade" id="contractor-tab-pane" role="tabpanel"
+            aria-labelledby="contractor-tab" tabindex="0">
+            <div class="col-12 px-0">
+              <div class="mb-2">
+                <label for="exampleInputEmail1" class="form-label">زمینه فعالیت</label>
+                <select class="form-select">
+                  <option>شناسایی و اکتشاف</option>
+                  <option>شناسایی</option>
+                  <option>اکتشاف</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 px-0">
+              <div class="mb-2">
+                <label for="exampleInputEmail1" class="form-label">تجهیزات و ماشین آلات</label>
+                <select class="form-select">
+                  <option>بیل مکانیکی</option>
+                  <option>غلتک چرخ دار</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 px-0">
+              <div class="mb-2">
+                <label for="exampleInputEmail1" class="form-label">تعداد پرسنل</label>
+                <select class="form-select">
+                  <option>1-5 نفر</option>
+                  <option>5-10 نفر</option>
+                  <option>10-15 نفر</option>
+                </select>
+              </div>
+            </div>
+            <input type="submit" value="تایید و ادامه" class="btn text-white font-bold py-2 w-100 bg-gray2">
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex align-items-center justify-content-center bg-gray">
+        <img src="assets/img/Group 5.png">
+      </div>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="assets/js/scrollreveal.min.js"></script>
+  <!-- <script src="assets/js/scripts.js"></script> -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
