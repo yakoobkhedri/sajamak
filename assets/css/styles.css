@@ -78,7 +78,9 @@ a {
 .fs-14 {
     font-size: 14px;
 }
-
+.h-100vh{
+    height: 100vh;
+}
 .w-15 {
     width: 15px;
 }
