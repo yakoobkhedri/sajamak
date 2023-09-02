@@ -281,10 +281,10 @@ a {
 }
 
 /* request page */
-.steps:hover,.steps.active {
+.steps.active {
     color: #00BED8!important;
 }
-.steps:hover .number,.steps.active .number {
+.steps.active .number {
     background-color: #00BED8;
     color: white;
 }
