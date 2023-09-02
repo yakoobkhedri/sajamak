@@ -258,6 +258,10 @@ a {
 .nav-tabs .nav-link{
     z-index: 22;
 }
+/* header */
+header li a{
+    color: #6c757d !important;
+}
 /* machines */
 .machine-img-box {
     height: 199px;
