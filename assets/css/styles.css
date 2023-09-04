@@ -36,6 +36,9 @@ body {
 .bg-gray3 {
     background-color: #E5E7EB;
 }
+.bg-gray4 {
+    background-color: #f9fafb;
+}
 
 .bg-orange {
     background-color: #FFA800;
@@ -100,6 +103,12 @@ a {
 }
 .w-72 {
     width: 72px;
+}
+.w-128 {
+    width: 128px;
+}
+.h-128 {
+    height: 128px;
 }
 .w-171 {
     width: 171px;
