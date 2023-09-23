@@ -293,13 +293,16 @@ header li a{
 }
 
 /* statistics */
-.statistics .col-lg-5::after {
+.statistics .col-lg-5::after,#banner::after {
     content: url('../img/Polygon\ 4\(1\).svg');
     position: absolute;
     left: -1px;
     top: 27%;
 }
-
+#banner::after {
+    top: 32%;
+    left: 0;
+}
 /* app */
 .app .col-lg-5::after {
     content: url('../img/Polygon\ 4\(1\).svg');
