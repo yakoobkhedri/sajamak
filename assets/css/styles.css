@@ -283,9 +283,16 @@ a {
 .nav-tabs .nav-link{
     z-index: 22;
 }
+.main-hover:hover{
+    background-color: #00BED8!important;
+    color: white!important;
+}
 /* header */
 header li a{
     color: #6c757d !important;
+}
+header ul li a:hover,header ul li a.active{
+    color: #00BED8 !important;
 }
 /* machines */
 .machine-img-box {

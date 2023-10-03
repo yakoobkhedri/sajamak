@@ -120,7 +120,14 @@
   <main>
 
     <!-- banner -->
-    <section>
+    <section class="position-relative overflow-hidden">
+       <!-- shape -->
+        <img alt="shape" src="assets/img/Polygon contact.png" class="position-absolute start-0">
+        <!-- shape -->
+        <svg class="position-absolute start-0 top-50" xmlns="http://www.w3.org/2000/svg" width="86" height="169" viewBox="0 0 86 169" fill="none">
+          <path d="M86 84.5L-0.999998 -1.03746e-06L-1 169L86 84.5Z" fill="white"/>
+          </svg>
+          <!--  -->
       <div class="container position-relative">
         <div class="row g-4 align-items-start mt-5">
           <div class="col-lg-6 order-1 order-lg-0">
@@ -160,13 +167,14 @@
               d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" />
           </svg>
         </a>
-        <!-- polygon -->
-        <img alt="polygon" src="assets/img/Polygon 1.svg" class="position-absolute mx-auto bottom-31 end-0 start-0">
       </div>
     </section>
 
     <!-- contact -->
-    <section id="first-section" class="py-5 bg-gray">
+    <section id="first-section" class="py-5 bg-gray position-relative">
+       <!-- polygon -->
+       <img alt="polygon" src="assets/img/Polygon 1.svg" class="position-absolute mx-auto top-0 end-0 start-0">
+       <!--  -->
       <div class="container my-5">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -195,6 +203,7 @@
               <div class="col-12">
                 <label class="form-label">پیغام</label>
                 <textarea class="form-control" rows="5" placeholder="پیغام خود را اینجا بنویسید"></textarea>
+                <p class="text-success m-0 mt-2">درخواست شما با موفقیت ارسال شد.</p>
               </div>
               <div class="col-12">
                 <input type="submit" value="ارسال" class="btn btn-info text-white font-bold py-2 w-171 me-auto d-table">
