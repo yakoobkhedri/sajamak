@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"  href="assets/img/favicon.jpg"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link rel='stylesheet' type='text/css' media='screen' href='assets/css/styles.css'>
+  <title>جزئیات دستگاه</title>
+</head>
+
+<body>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div
+            class="d-flex cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
+            <input type="search" placeholder="جستجو..." class="form-control bg-transparent border-0 focus-none">
+            <div class="position-relative cursor">
+              <input type="submit"
+                class="position-absolute w-100 h-100 top-0 end-0 start-0 bottom-0 opacity-none z-10 cursor">
+              <img alt="search" src="assets/img/Vector.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- header -->
+  <header class="py-3">
+    <!-- overlay -->
+    <div id="overlay" class="position-fixed end-0 top-0 start-0 bottom-0 d-lg-none"></div>
+    <div class="d-flex container align-items-center gap-4 justify-content-between">
+      <!-- ham icon -->
+      <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
+        class="bi bi-list d-xl-none cursor flex-shrink-0" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+      </svg>
+      <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+        <div class="d-flex align-items-center gap-4 justify-content-between w-100">
+          <!-- logo -->
+          <a>
+            <img alt="logo" src="assets/img/Frame 9249.png">
+          </a>
+          <!-- nav -->
+          <nav>
+            <ul
+              class="list-unstyled m-0 p-xl-0 p-3 d-flex flex-column flex-xl-row align-items-xl-center gap-4 text-secondary fw-bold">
+              <li><a>اداری معدنی</a></li>
+              <li><a>فنی مهندسی</a></li>
+              <li><a>پیمانکاری معدن</a></li>
+              <li><a>درباره ما</a></li>
+              <li><a>تماس با ما</a></li>
+              <li>
+                <a
+                  class="btn btn-info py-2 px-3 d-xl-none d-flex align-items-center font-bold text-white justify-content-center gap-2 fs-7">
+                  <img alt="login" src="assets/img/login.svg" class="w-15">
+                  <span>ثبت نام / ورود</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- language && login && search -->
+      <div class="d-flex align-items-center gap-3">
+        <div data-bs-toggle="modal" data-bs-target="#searchModal"
+          class="bg-orange d-none d-sm-flex cursor rounded-circle w-37 h-37 py-1 px-2 border align-items-center justify-content-center">
+          <img alt="search" src="assets/img/Vector.svg">
+        </div>
+        <div class="language position-relative cursor">
+          <div class="d-flex align-items-center gap-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            <img alt="language" src="assets/img/artwork.png">
+            <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
+          </div>
+          <ul class="dropdown-menu p-0 m-0 font-bold bg-white shadow-sm rounded-4">
+            <li class="d-flex align-items-center justify-content-center py-3 gap-3 border-bottom">
+              <img alt="language" src="assets/img/artwork.png">
+              <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
+            </li>
+            <li class="d-flex align-items-center justify-content-center py-3 gap-3">
+              <img alt="language" src="assets/img/artwork.png">
+              <p class="mb-0 fw-bold fs-7 text-secondary">English</p>
+            </li>
+          </ul>
+        </div>
+        <a
+          class="btn btn-info py-2 px-3 d-xl-flex d-none align-items-center font-bold text-white justify-content-center gap-2 fs-7">
+          <img alt="login" src="assets/img/login.svg" class="w-15">
+          <span>ثبت نام / ورود</span>
+        </a>
+      </div>
+    </div>
+    <!-- mobile search -->
+    <div class="container mt-3">
+      <div
+        class="bg-orange d-flex d-sm-none cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
+        <input type="search" placeholder="جستجو..." class="form-control bg-transparent border-0 focus-none">
+        <div class="position-relative cursor">
+          <input type="submit"
+            class="position-absolute w-100 h-100 top-0 end-0 start-0 bottom-0 opacity-none z-10 cursor">
+          <img alt="search" src="assets/img/Vector.svg">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main>
+
+    <!-- breadcrumb -->
+    <section class="container my-2">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb fs-14 fw-bold">
+          <li class="breadcrumb-item"><a class="text-dark" href="index.html">صفحه اصلی</a></li>
+          <li class="breadcrumb-item"><a class="text-dark" href="index.html">مواد و محصولات معدنی</a></li>
+          <li class="breadcrumb-item"><a class="text-dark" href="index.html">تجهیزات و ماشین آلات معدنی</a></li>
+          <li class="breadcrumb-item active text-secondary" aria-current="page">لودر 5 تن چانگلین</li>
+        </ol>
+      </nav>
+    </section>
+
+    <!-- banner -->
+    <section class="position-relative pb-5">
+      <!--  -->
+      <div class="container position-relative">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-8 order-1 order-lg-0 ps-lg-5">
+            <a class="d-flex align-items-center gap-2 after cursor mt-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" viewBox="0 0 18 16" fill="none">
+                <path d="M1.5 8L16.5 8M16.5 8L9.75 1.25M16.5 8L9.75 14.75" stroke="#374151" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              <h4 class="font-bold text-gray">لودر 5 تن چانگلین</h4>
+            </a>
+            <p class="fw-bold mt-3 mb-1 lh-lg">
+              تجهیزات و ماشین آلات معدنی
+            </p>
+            <span class="fs-8 text-secondary fw-bold bg-gray rounded-pill py-1 px-2">عملیات خاکی و حمل و نقل</span>
+            <p class="text-secondary ps-lg-5 fs-14 mb-0 text-justify mt-3">
+              لودر 5 تن چانگلین (Changlin)
+               یک نوع ماشین سنگین بارگیری است که برای حمل و جابجایی مواد سنگین و ساختمانی استفاده می‌شود. این لودرها با طراحی مستحکم، عملکرد قوی و قابلیت‌های منحصر به فرد خود، در صنعت ساخت و ساز، معدن، کشاورزی و غیره مورد استفاده قرار می‌گیرند.
+            </p>
+            <p class="text-secondary ps-lg-5 fs-14 text-justify">
+              لودرهای 5 تن چانگلین به عنوان یکی از ماشین‌های سنگین بارگیری پرکاربرد در صنعت، با قابلیت‌ها و عملکردی که ارائه می‌دهند، می‌توانند در پروژه‌های مختلف ساختمانی و معدنی کاربرد داشته باشند.              
+            </p>
+           <div class="d-flex align-items-center gap-3 mt-4">
+            <a class="d-flex align-items-center justify-content-center py-2 gap-2 btn border border-dark main-hover">
+              <svg xmlns="http://www.w3.org/2000/svg" class="transition" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path class="transition" d="M15.26 22.2503H8.73998C3.82998 22.2503 1.72998 20.1503 1.72998 15.2403V15.1103C1.72998 10.6703 3.47998 8.53027 7.39998 8.16027C7.79998 8.13027 8.17998 8.43027 8.21998 8.84027C8.25998 9.25027 7.95998 9.62027 7.53998 9.66027C4.39998 9.95027 3.22998 11.4303 3.22998 15.1203V15.2503C3.22998 19.3203 4.66998 20.7603 8.73998 20.7603H15.26C19.33 20.7603 20.77 19.3203 20.77 15.2503V15.1203C20.77 11.4103 19.58 9.93027 16.38 9.66027C15.97 9.62027 15.66 9.26027 15.7 8.85027C15.74 8.44027 16.09 8.13027 16.51 8.17027C20.49 8.51027 22.27 10.6603 22.27 15.1303V15.2603C22.27 20.1503 20.17 22.2503 15.26 22.2503Z" fill="#292D32"/>
+                <path class="transition" d="M12 15.63C11.59 15.63 11.25 15.29 11.25 14.88V2C11.25 1.59 11.59 1.25 12 1.25C12.41 1.25 12.75 1.59 12.75 2V14.88C12.75 15.3 12.41 15.63 12 15.63Z" fill="#292D32"/>
+                <path class="transition" d="M11.9998 16.7498C11.8098 16.7498 11.6198 16.6798 11.4698 16.5298L8.11984 13.1798C7.82984 12.8898 7.82984 12.4098 8.11984 12.1198C8.40984 11.8298 8.88984 11.8298 9.17984 12.1198L11.9998 14.9398L14.8198 12.1198C15.1098 11.8298 15.5898 11.8298 15.8798 12.1198C16.1698 12.4098 16.1698 12.8898 15.8798 13.1798L12.5298 16.5298C12.3798 16.6798 12.1898 16.7498 11.9998 16.7498Z" fill="#292D32"/>
+                </svg>
+                <p class="mb-0">دانلود کاتالوگ</p>
+            </a>
+            <a class="btn btn-info text-white py-2">ثبت درخواست</a>
+           </div>
+          </div>
+          <div class="col-lg-4 order-0 order-lg-1 mt-5 mt-lg-0">
+            <img alt="banner" src="assets/img/pngkit_caterpillar-png_1505520 2.png"
+              class="img-fluid w-100 mx-auto d-block">
+              <div class="d-flex align-items-center justify-content-center gap-3 mt-3">
+                 <img alt="banner" src="assets/img/loder1.png" class="w-25 d-block">
+                 <img alt="banner" src="assets/img/loder2.png" class="w-25 d-block">
+                 <img alt="banner" src="assets/img/loder3.png" class="w-25 d-block">
+                 <img alt="banner" src="assets/img/loder4.png" class="w-25 d-block">
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- details -->
+    <section>
+      <div class="container">
+        <div class="after before pe-4">
+          <h5 class="font-bold">مشخصات فنی</h5>
+        </div>
+        <ul class="list-unstyled text-secondary fs-14 p-0 mt-4 lh-lg mb-0">
+          <li>مجهز به موتور قدرتمند CAT Licence</li>
+          <li>مجهز به گیربکس پاورشیفت 200 ZF</li>
+          <li>تک لیور (دسته جوی استیک)</li>
+          <li>شاسی تقویت شده از لحاظ ابعادی و الیاژی</li>
+          <li>سیستم تهویه مطبوع (سرد و گرم) A/C</li>
+          <li>کابین لوکس ، Fops/Rops ، عایق صدا و گرد و غبار</li>
+          <li>دستزسی آسان به کلیه ادوات و تجهیزات</li>
+          <li>مجهز به دوربین و مانیتور LCD</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- machines -->
+    <section class="py-5">
+      <div class="container">
+        <div class="after before pe-4">
+          <h5 class="font-bold">محصولات مرتبط</h5>
+        </div>
+        <!-- swiper -->
+        <div class="swiper machines mt-5">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide border rounded-4">
+              <div class="pt-5 machine-img-box">
+                <img alt="banner" src="assets/img/Construction-Machine-PNG-Images 1.png"
+                  class="img-fluid w-75 d-block mx-auto">
+              </div>
+              <div class="p-3">
+                <a class="after font-bold text-dark d-table">غلتک چرخ دار</a>
+                <p class="fs-14 mt-4 fw-bold mb-1">تجهیزات و ماشین آلات معدنی</p>
+                <span class="fs-8 text-secondary fw-bold bg-gray rounded-pill py-1 px-2">عملیات خاکی و حمل و نقل</span>
+                <a class="d-flex align-items-center text-info gap-1 font-bold justify-content-end mt-4">
+                  <p class="mb-0">جزئیات محصول</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide border rounded-4">
+              <div class="pt-5 machine-img-box">
+                <img alt="banner" src="assets/img/Construction-Machine-PNG-Image 3.png"
+                  class="img-fluid w-75 d-block mx-auto">
+              </div>
+              <div class="p-3">
+                <a class="after font-bold text-dark d-table">غلتک چرخ دار</a>
+                <p class="fs-14 mt-4 fw-bold mb-1">تجهیزات و ماشین آلات معدنی</p>
+                <span class="fs-8 text-secondary fw-bold bg-gray rounded-pill py-1 px-2">عملیات خاکی و حمل و نقل</span>
+                <a class="d-flex align-items-center text-info gap-1 font-bold justify-content-end mt-4">
+                  <p class="mb-0">جزئیات محصول</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide border rounded-4">
+              <div class="pt-5 machine-img-box">
+                <img alt="banner" src="assets/img/Construction-Machine-PNG-Images 1(1).png"
+                  class="img-fluid w-75 d-block mx-auto">
+              </div>
+              <div class="p-3">
+                <a class="after font-bold text-dark d-table">غلتک چرخ دار</a>
+                <p class="fs-14 mt-4 fw-bold mb-1">تجهیزات و ماشین آلات معدنی</p>
+                <span class="fs-8 text-secondary fw-bold bg-gray rounded-pill py-1 px-2">عملیات خاکی و حمل و نقل</span>
+                <a class="d-flex align-items-center text-info gap-1 font-bold justify-content-end mt-4">
+                  <p class="mb-0">جزئیات محصول</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide border rounded-4">
+              <div class="pt-5 machine-img-box">
+                <img alt="banner" src="assets/img/pngkit_caterpillar-png_1505520 1.png"
+                  class="img-fluid w-75 d-block mx-auto">
+              </div>
+              <div class="p-3">
+                <a class="after font-bold text-dark d-table">غلتک چرخ دار</a>
+                <p class="fs-14 mt-4 fw-bold mb-1">تجهیزات و ماشین آلات معدنی</p>
+                <span class="fs-8 text-secondary fw-bold bg-gray rounded-pill py-1 px-2">عملیات خاکی و حمل و نقل</span>
+                <a class="d-flex align-items-center text-info gap-1 font-bold justify-content-end mt-4">
+                  <p class="mb-0">جزئیات محصول</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide border rounded-4">
+              <div class="pt-5 machine-img-box">
+                <img alt="banner" src="assets/img/Construction-Machine-PNG-Images 1.png"
+                  class="img-fluid w-75 d-block mx-auto">
+              </div>
+              <div class="p-3">
+                <a class="after font-bold text-dark d-table">غلتک چرخ دار</a>
+                <p class="fs-14 mt-4 fw-bold mb-1">تجهیزات و ماشین آلات معدنی</p>
+                <span class="fs-8 text-secondary fw-bold bg-gray rounded-pill py-1 px-2">عملیات خاکی و حمل و نقل</span>
+                <a class="d-flex align-items-center text-info gap-1 font-bold justify-content-end mt-4">
+                  <p class="mb-0">جزئیات محصول</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide border rounded-4">
+              <div class="pt-5 machine-img-box">
+                <img alt="banner" src="assets/img/Construction-Machine-PNG-Image 3.png"
+                  class="img-fluid w-75 d-block mx-auto">
+              </div>
+              <div class="p-3">
+                <a class="after font-bold text-dark d-table">غلتک چرخ دار</a>
+                <p class="fs-14 mt-4 fw-bold mb-1">تجهیزات و ماشین آلات معدنی</p>
+                <span class="fs-8 text-secondary fw-bold bg-gray rounded-pill py-1 px-2">عملیات خاکی و حمل و نقل</span>
+                <a class="d-flex align-items-center text-info gap-1 font-bold justify-content-end mt-4">
+                  <p class="mb-0">جزئیات محصول</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide border rounded-4">
+              <div class="pt-5 machine-img-box">
+                <img alt="banner" src="assets/img/Construction-Machine-PNG-Images 1(1).png"
+                  class="img-fluid w-75 d-block mx-auto">
+              </div>
+              <div class="p-3">
+                <a class="after font-bold text-dark d-table">غلتک چرخ دار</a>
+                <p class="fs-14 mt-4 fw-bold mb-1">تجهیزات و ماشین آلات معدنی</p>
+                <span class="fs-8 text-secondary fw-bold bg-gray rounded-pill py-1 px-2">عملیات خاکی و حمل و نقل</span>
+                <a class="d-flex align-items-center text-info gap-1 font-bold justify-content-end mt-4">
+                  <p class="mb-0">جزئیات محصول</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide border rounded-4">
+              <div class="pt-5 machine-img-box">
+                <img alt="banner" src="assets/img/pngkit_caterpillar-png_1505520 1.png"
+                  class="img-fluid w-75 d-block mx-auto">
+              </div>
+              <div class="p-3">
+                <a class="after font-bold text-dark d-table">غلتک چرخ دار</a>
+                <p class="fs-14 mt-4 fw-bold mb-1">تجهیزات و ماشین آلات معدنی</p>
+                <span class="fs-8 text-secondary fw-bold bg-gray rounded-pill py-1 px-2">عملیات خاکی و حمل و نقل</span>
+                <a class="d-flex align-items-center text-info gap-1 font-bold justify-content-end mt-4">
+                  <p class="mb-0">جزئیات محصول</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+  <footer class="bg-gray position-relative mt-5">
+    <img alt="polygon" src="assets/img/Polygon 1.svg" class="position-absolute top-0 end-0 start-0 mx-auto">
+    <a href="#"
+      class="arrow-link border-dark position-absolute end-0 start-0 border rounded-4 text-dark mx-auto py-3 d-flex align-items-center justify-content-center w-30">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-down"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z">
+        </path>
+      </svg>
+    </a>
+    <div class="container">
+      <div class="row g-4 py-4">
+        <div class="col-lg-4">
+          <a class="d-block"><img alt="logo" src="assets/img/Frame 9249.png"></a>
+          <p class="text-secondary fw-bold fs-14 mt-3 lh-lg">
+            سجامک یکی از برترین شرکت‌های پیمانکاری معادن در ایران است که با داشتن تیم متخصص و تجهیزات پیشرفته، در زمینه
+            استخراج مواد معدنی فعالیت می‌کند. این شرکت با بهره‌گیری از دانش فنی و تجربه کاری، به عنوان یکی از بهترین‌ها
+            در این صنعت شناخته می‌شود. سجامک در ارائه خدمات پیمانکاری معادن، از روش‌های مدرن و بهینه استفاده می‌کند و به
+            همین دلیل، به بهره‌وری بیشتر، کاهش هزینه‌ها و افزایش سودآوری در صنعت معدن کمک می‌کند.
+          </p>
+        </div>
+        <div class="col-lg-2 fs-14">
+          <h5 class="text-gray font-bold text-center">دسترسی</h5>
+          <ul class="list-unstyled fw-bold text-secondary lh-lg text-center mt-4 m-0 p-0">
+            <li><a>صفحه اصلی</a></li>
+            <li><a>اداری</a></li>
+            <li><a>خدمات</a></li>
+            <li><a>پیمانکاری</a></li>
+            <li><a>درباره ما</a></li>
+            <li><a>تماس با ما</a></li>
+            <li><a>مجله</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 fs-14">
+          <h5 class="text-gray font-bold text-center">لینک های مهم</h5>
+          <ul class="list-unstyled fw-bold text-secondary lh-lg text-center mt-4 m-0 p-0">
+            <li><a>ثبت معدن</a></li>
+            <li><a>خدمات فنی مهندسی</a></li>
+            <li><a>پیمانکاری معدن</a></li>
+            <li><a>تجهیزات و ماشین آلات</a></li>
+            <li><a>مواد و محصولات</a></li>
+            <li><a>خرید و فروش معدن</a></li>
+            <li><a>مشاوره</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 fs-14">
+          <h5 class="text-gray font-bold text-center">اطلاعات تماس</h5>
+          <ul class="list-unstyled fw-bold text-center mt-4 m-0 p-0">
+            <li class="mb-4">
+              <a class="d-flex align-items-center gap-2 justify-content-center text-secondary">
+                <img alt="phone" src="assets/img/phone.svg">
+                <p class="mb-0">034-2440786-9</p>
+              </a>
+            </li>
+            <li class="mb-4">
+              <a class="d-flex align-items-center gap-2 justify-content-center text-secondary">
+                <img alt="phone" src="assets/img/email.svg">
+                <p class="mb-0">info@Sajamak.com</p>
+              </a>
+            </li>
+            <li class="mb-4">
+              <a class="d-flex gap-2 justify-content-center text-secondary">
+                <img alt="phone" src="assets/img/map2.svg" class="flex-shrink-0">
+                <p class="mb-0">کرمان، میدان امیرکبیر، بلوار عدالت،
+                  خیابان بنفشه کوچه 12 ، پلاک 18 </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="d-flex flex-column flex-lg-row gap-2 text-center text-lg-end align-items-center justify-content-between text-secondary fs-7 fw-bold py-3 border-top">
+        <p class="mb-0">کلیه حقوق این سایت متعلق به سامانه جامع اجرایی معادن کشور می باشد.</p>
+        <p class="mb-0">2021-2022 © | شرایط و ضوابط . سیاست حفظ حریم خصوصی</p>
+        <p class="mb-0">توسعه و پیاده سازی شرکت نرم افزاری <a class="font-bold text-orange">رایان سپهر هامان</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="assets/js/scrollreveal.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

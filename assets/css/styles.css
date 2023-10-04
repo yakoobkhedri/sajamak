@@ -106,8 +106,14 @@ a {
 .w-72 {
     width: 72px;
 }
+.w-112 {
+    width: 112px;
+}
 .w-128 {
     width: 128px;
+}
+.h-102 {
+    height: 102px;
 }
 .h-128 {
     height: 128px;
@@ -286,6 +292,12 @@ a {
 .main-hover:hover{
     background-color: #00BED8!important;
     color: white!important;
+    border-color: #00bed8!important;
+}
+.main-hover:hover svg,.main-hover:hover path{
+    color: white!important;
+    fill: white;
+    stroke: white;
 }
 /* header */
 header li a{
