@@ -241,6 +241,10 @@ a {
     background-color: #1F2A37;
     color: #E5E7EB;
   }
+  .accordion-button:focus {
+    border-color: #86b7fe;
+    box-shadow: none;
+  }
 .brands .swiper-pagination-bullet {
     background: #00bed8 !important;
 }
