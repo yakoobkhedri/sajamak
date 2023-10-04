@@ -237,7 +237,10 @@ a {
 .swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
     background: white;
 }
-
+.paginations a:hover, .paginations a.active {
+    background-color: #1F2A37;
+    color: #E5E7EB;
+  }
 .brands .swiper-pagination-bullet {
     background: #00bed8 !important;
 }
