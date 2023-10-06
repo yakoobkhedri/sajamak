@@ -109,8 +109,14 @@ a {
 .w-112 {
     width: 112px;
 }
+.w-120 {
+    width: 120px;
+}
 .w-128 {
     width: 128px;
+}
+.h-101 {
+    height: 101px;
 }
 .h-102 {
     height: 102px;
@@ -308,6 +314,9 @@ a {
     fill: white;
     stroke: white;
 }
+#formModal .modal-dialog {
+    max-width: 1060px;
+  }
 /* header */
 header li a{
     color: #6c757d !important;
