@@ -32,15 +32,17 @@
             <input maxlength="1" required placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
             <input maxlength="1" required placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
           </div>
-          <a class="d-flex align-items-center justify-content-end font-bold gap-2 mt-2 fs-14 text-dark">
-            <img alt="resend" src="assets/img/arrow-path.svg">
-            <p class="mb-0">ارسال مجدد کد امنیتی</p>
-          </a>
+          <div class="d-none" id="resend">
+            <a class="d-flex align-items-center justify-content-end font-bold gap-2 mt-2 fs-14 text-dark">
+              <img alt="resend" src="assets/img/arrow-path.svg">
+              <p class="mb-0">ارسال مجدد کد امنیتی</p>
+            </a>
+          </div>
           <div class="d-flex align-items-center justify-content-between mt-2">
             <small class="text-danger fs-14 font-bold d-none">رمز عبور اشتباه است</small>
-            <div class="d-flex align-items-center justify-content-end gap-2 fs-14 text-dark">
+            <div class="d-flex align-items-center justify-content-end gap-2 fs-14 text-dark" id="timerBox">
               <img alt="resend" src="assets/img/clock.svg">
-              <p class="mb-0 text-secondary">02:15 مانده تا دریافت کد مجدد</p>
+              <p class="mb-0 text-secondary"><span id="timer"></span> مانده تا دریافت کد مجدد</p>
             </div>
           </div>
           <input type="submit" class="btn btn-info text-white font-bold w-100 mt-5 py-3" value="تایید">
@@ -65,7 +67,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="assets/js/scrollreveal.min.js"></script>
-  <!-- <script src="assets/js/scripts.js"></script> -->
+  <script src="assets/js/timer.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
 </body>
 
