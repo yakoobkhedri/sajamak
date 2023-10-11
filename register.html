@@ -26,18 +26,18 @@
         <h3 class="font-bold mt-5 py-5">ثبت نام حساب کاربری</h3>
         <form>
           <p class="mb-0 fs-14 text-secondary">تایید شماره موبایل  09123264568<a class="font-bold text-dark me-4">ویرایش</a></p>
-          <div class="rounded-3 border border-danger overflow-hidden d-flex align-items-center justify-content-around mt-2">
-            <input placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
-            <input placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
-            <input placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
-            <input placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
+          <div class="rounded-3 border overflow-hidden d-flex align-items-center justify-content-around mt-2">
+            <input maxlength="1" required placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
+            <input maxlength="1" required placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
+            <input maxlength="1" required placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
+            <input maxlength="1" required placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
           </div>
           <a class="d-flex align-items-center justify-content-end font-bold gap-2 mt-2 fs-14 text-dark">
             <img alt="resend" src="assets/img/arrow-path.svg">
             <p class="mb-0">ارسال مجدد کد امنیتی</p>
           </a>
           <div class="d-flex align-items-center justify-content-between mt-2">
-            <small class="text-danger fs-14 font-bold d-block">رمز عبور اشتباه است</small>
+            <small class="text-danger fs-14 font-bold d-none">رمز عبور اشتباه است</small>
             <div class="d-flex align-items-center justify-content-end gap-2 fs-14 text-dark">
               <img alt="resend" src="assets/img/clock.svg">
               <p class="mb-0 text-secondary">02:15 مانده تا دریافت کد مجدد</p>

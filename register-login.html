@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon"  href="assets/img/favicon.jpg"/>
+  <link rel="shortcut icon" href="assets/img/favicon.jpg" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -17,23 +17,26 @@
   <!-- main -->
   <main>
 
-   <div class="row mx-0">
+    <div class="row mx-0">
       <div class="col-lg-6 px-5 py-3">
         <!-- logo -->
         <a>
           <img alt="logo" src="assets/img/Frame 9249.png">
         </a>
         <h3 class="font-bold mt-5 py-5">ثبت نام / ورود به حساب کاربری</h3>
-        <form>
+        <form class="formLogin">
           <label class="d-flex align-items-center gap-2">
             <img src="assets/img/phone1.svg">
-              <p class="text-muted font-bold fs-14 mb-0">شماره همراه</p>
+            <p class="text-muted font-bold fs-14 mb-0">شماره همراه</p>
           </label>
-          <input placeholder="شماره همراه خود را وارد کنید" class="form-control mt-3">
+          <input id="tel" placeholder="شماره همراه خود را وارد کنید" class="form-control mt-3">
+          <small class="text-danger fs-14 mt-2 font-bold d-none" id="numberText"></small>
+          <small class="text-warning fs-14 mt-2 font-bold d-none">شماره خود را وارد کنید</small>
           <input type="submit" class="btn btn-info text-white font-bold w-100 mt-5 py-3" value="تایید">
         </form>
         <p class="fs-14 text-center mt-5 pt-5 px-4">
-          با ثبت نام در سامانه جامع اجرایی معادن کشور ، <span class="font-bold">شرایط و قوانین</span> استفاده از سرویس‌های سایت را می پذیرم.
+          با ثبت نام در سامانه جامع اجرایی معادن کشور ، <span class="font-bold">شرایط و قوانین</span> استفاده از
+          سرویس‌های سایت را می پذیرم.
         </p>
         <img alt="divider" src="assets/img/divider.svg" class="d-block mx-auto img-fluid">
         <ul class="list-unstyled flex-wrap fs-14 font-bold d-flex align-items-center justify-content-center gap-4 mt-3">
@@ -45,15 +48,39 @@
       <div class="col-lg-6 d-flex align-items-center justify-content-center">
         <img src="assets/img/register.png" class="img-fluid w-75 d-block mx-auto">
       </div>
-   </div>
+    </div>
 
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="assets/js/scrollreveal.min.js"></script>
-  <!-- <script src="assets/js/scripts.js"></script> -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const form = document.querySelector('form');
+    form.addEventListener('submit', validate);
+
+    function validate(event) {
+      const tel = document.getElementById('tel');
+      const numberText = document.getElementById('numberText');
+      if (tel.value.length < 11 || tel.value.length > 11) {
+        document.querySelector('.formLogin').classList.add('error')
+        document.querySelector('.formLogin').classList.remove('warning')
+        numberText.textContent = 'شماره همراه اشتباه است';
+        event.preventDefault();
+      }
+      if (!Number.isInteger(Number(tel.value))) {
+        numberText.textContent = 'شماره همراه باید یک عدد صحیح باشد';
+        event.preventDefault();
+      }
+      if (tel.value.length === 0) {
+        document.querySelector('.formLogin').classList.add('warning')
+        document.querySelector('.formLogin').classList.remove('error')
+        event.preventDefault();
+      }
+    }
+
+  </script>
 </body>
 
 </html>

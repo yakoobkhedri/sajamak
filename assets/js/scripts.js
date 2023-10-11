@@ -1,3 +1,4 @@
+
 // mobile menu
 
 let hamIcon=document.getElementById('hamIcon');
@@ -76,37 +77,4 @@ var menuSwiper = new Swiper(".brands", {
 
 Fancybox.bind("[data-fancybox]", {
   // Your custom options
-});
-// animation
-
-ScrollReveal().reveal('.top', {
-  duration: 2000,
-  origin: 'top',
-  distance: '100px',
-  delay: 500,
-  easing: 'ease-out'
-});
-
-ScrollReveal().reveal('.bottom', {
-  duration: 2000,
-  origin: 'bottom',
-  distance: '100px',
-  delay: 500,
-  easing: 'ease-out'
-});
-
-ScrollReveal().reveal('.left', {
-  duration: 2000,
-  origin: 'left',
-  distance: '100px',
-  delay: 500,
-  easing: 'ease-out'
-});
-
-ScrollReveal().reveal('.right', {
-  duration: 2000,
-  origin: 'right',
-  distance: '100px',
-  delay: 500,
-  easing: 'ease-out'
 });

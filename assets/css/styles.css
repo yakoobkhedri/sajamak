@@ -376,6 +376,16 @@ header ul li a:hover,header ul li a.active{
     max-height: 1000px;
     padding: 10px 0!important;
 }
+/* login page */
+.formLogin.error .text-danger,.formLogin.warning .text-warning,.formLogin.number .text-danger{
+    display: block!important;
+}
+.formLogin.error #pass,.formLogin.error #tel,.formLogin.number #telو.formLogin.error #pass1{
+    border: 1px solid #dc3545 !important;
+}
+.formLogin.warning #tel{
+    border: 1px solid #ffc107 !important;
+}
 /* footer */
 footer .arrow-link {
     transform: rotate(180deg);
