@@ -371,6 +371,13 @@ header ul li a:hover,
 header ul li a.active {
     color: #00BED8 !important;
 }
+/* banner */
+.bigImg{
+    display: none;
+}
+.bigImg:first-child{
+    display: block;
+}
 /* machines */
 .machine-img-box {
     height: 199px;

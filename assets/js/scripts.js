@@ -12,6 +12,25 @@ hamIcon.addEventListener('click', function () {
   })
 })
 
+// banner slider
+
+let smallImgs=Array.from(document.getElementsByClassName('smallImgs'));
+let bigImg=Array.from(document.getElementsByClassName('bigImg'));
+
+smallImgs.forEach((tab) => {
+  tab.addEventListener('click', function () {
+      let tabId = tab.dataset.id;
+      bigImg.forEach((content) => {
+          let contentId = content.dataset.id;
+          if (tabId === contentId) {
+              content.style.display='block';
+          } else {
+            content.style.display='none';
+          }
+      })
+  })
+})
+
 // filter
 
 let filterBtn = Array.from(document.getElementsByClassName('filterBtn'));
@@ -76,22 +95,6 @@ var menuSwiper = new Swiper(".brands", {
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,
-  },
-});
-var smallImgs = new Swiper(".smallImgs", {
-  spaceBetween: 10,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-});
-var gallery = new Swiper(".gallery", {
-  spaceBetween: 10,
-  navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-  },
-  thumbs: {
-      Swiper
   },
 });
 // fancybox
