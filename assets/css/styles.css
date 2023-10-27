@@ -361,7 +361,9 @@ a {
 #formModal .modal-dialog {
     max-width: 1060px;
 }
-
+div:where(.swal2-container) .swal2-html-container {
+   margin: 0!important;
+}
 /* header */
 header li a {
     color: #6c757d !important;

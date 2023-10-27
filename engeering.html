@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon"  href="assets/img/favicon.jpg"/>
+  <link rel="shortcut icon" href="assets/img/favicon.jpg" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -13,14 +13,14 @@
 </head>
 
 <body>
-  
 
-    <!-- search Modal -->
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div
+
+  <!-- search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div
             class="d-flex cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
             <input type="search" placeholder="جستجو..." class="form-control bg-transparent border-0 focus-none">
             <div class="position-relative cursor">
@@ -29,12 +29,12 @@
               <img alt="search" src="assets/img/Vector.svg">
             </div>
           </div>
-          </div>
         </div>
       </div>
     </div>
-  
-      <!-- form Modal -->
+  </div>
+
+  <!-- form Modal -->
   <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -299,9 +299,9 @@
                 <div class="col-lg-6"></div>
                 <div class="col-lg-6">
                   <div class="d-flex align-items-center justify-content-between gap-4">
-                    <input data-bs-dismiss="modal" type="reset" value="انصراف" class="btn bg-gray3 w-100 py-2 font-bold mt-2 text-secondary">
-                    <a class="btn btn-info w-100 py-2 font-bold mt-2 text-white" data-bs-toggle="modal"
-                      data-bs-target="#submitModal">ثبت اطلاعات</a>
+                    <input data-bs-dismiss="modal" type="reset" value="انصراف"
+                      class="btn bg-gray3 w-100 py-2 font-bold mt-2 text-secondary">
+                    <a class="btn btn-info w-100 py-2 font-bold mt-2 text-white" id="submit">ثبت اطلاعات</a>
                   </div>
                 </div>
               </form>
@@ -311,145 +311,128 @@
       </div>
     </div>
   </div>
-      
-        <!-- submit Modal -->
-        <div class="modal fade" id="submitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content text-center">
-              <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <img alt="success" src="assets/img/Ok.png" class="w-72">
-                <h5 class="text-success font-bold mt-3">درخواست موفق </h5>
-                <p class="text-gray">درخواست شما با موفقیت ثبت شد</p>
-                <p class="fs-14 text-gray">شماره پیگیری:2369894 </p>
-              </div>
-              <div class="modal-footer border-0">
-                <button type="button" class="btn btn-info text-white font-bold w-100">نمایش درخواست</button>
-              </div>
+
+  <!-- auth Modal -->
+  <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <form class="modal-content text-center">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <svg xmlns="http://www.w3.org/2000/svg" width="52" height="62" viewBox="0 0 52 62" fill="none">
+            <path
+              d="M45.6199 7.50992L29.1199 1.32992C27.4099 0.699922 24.6199 0.699922 22.9099 1.32992L6.4099 7.50992C3.2299 8.70992 0.649902 12.4299 0.649902 15.8199V40.1199C0.649902 42.5499 2.2399 45.7599 4.1899 47.1999L20.6899 59.5299C23.5999 61.7199 28.3699 61.7199 31.2799 59.5299L47.7799 47.1999C49.7299 45.7299 51.3199 42.5499 51.3199 40.1199V15.8199C51.3499 12.4299 48.7699 8.70992 45.6199 7.50992ZM28.2499 33.6099V41.4999C28.2499 42.7299 27.2299 43.7499 25.9999 43.7499C24.7699 43.7499 23.7499 42.7299 23.7499 41.4999V33.6099C20.7199 32.6499 18.4999 29.8299 18.4999 26.4999C18.4999 22.3599 21.8599 18.9999 25.9999 18.9999C30.1399 18.9999 33.4999 22.3599 33.4999 26.4999C33.4999 29.8599 31.2799 32.6499 28.2499 33.6099Z"
+              fill="#31C48D" />
+          </svg>
+          <h5 class="text-success font-bold mt-3">احراز هویت</h5>
+          <div class="mt-4">
+            <p class="mb-0 fs-14 text-secondary text-end">تایید شماره موبایل 09123264568<a
+                class="font-bold text-dark me-4">ویرایش</a></p>
+            <div class="rounded-3 border overflow-hidden d-flex align-items-center justify-content-around mt-2">
+              <input placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
+              <input placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
+              <input placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
+              <input placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
             </div>
-          </div>
-        </div>
-      
-         <!-- auth Modal -->
-         <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <form class="modal-content text-center">
-              <div class="modal-header border-0">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="62" viewBox="0 0 52 62" fill="none">
-                  <path d="M45.6199 7.50992L29.1199 1.32992C27.4099 0.699922 24.6199 0.699922 22.9099 1.32992L6.4099 7.50992C3.2299 8.70992 0.649902 12.4299 0.649902 15.8199V40.1199C0.649902 42.5499 2.2399 45.7599 4.1899 47.1999L20.6899 59.5299C23.5999 61.7199 28.3699 61.7199 31.2799 59.5299L47.7799 47.1999C49.7299 45.7299 51.3199 42.5499 51.3199 40.1199V15.8199C51.3499 12.4299 48.7699 8.70992 45.6199 7.50992ZM28.2499 33.6099V41.4999C28.2499 42.7299 27.2299 43.7499 25.9999 43.7499C24.7699 43.7499 23.7499 42.7299 23.7499 41.4999V33.6099C20.7199 32.6499 18.4999 29.8299 18.4999 26.4999C18.4999 22.3599 21.8599 18.9999 25.9999 18.9999C30.1399 18.9999 33.4999 22.3599 33.4999 26.4999C33.4999 29.8599 31.2799 32.6499 28.2499 33.6099Z" fill="#31C48D"/>
-                  </svg>
-                <h5 class="text-success font-bold mt-3">احراز هویت</h5>
-                <div class="mt-4">
-                  <p class="mb-0 fs-14 text-secondary text-end">تایید شماره موبایل  09123264568<a class="font-bold text-dark me-4">ویرایش</a></p>
-                  <div class="rounded-3 border overflow-hidden d-flex align-items-center justify-content-around mt-2">
-                    <input placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
-                    <input placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
-                    <input placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
-                    <input placeholder="-" class="border-0 outline-none flex-grow-1 w-25 text-center py-2">
-                  </div>
-                  <a class="d-flex align-items-center justify-content-end font-bold gap-2 mt-2 fs-14 text-dark">
-                    <img alt="resend" src="assets/img/arrow-path.svg">
-                    <p class="mb-0">ارسال مجدد کد امنیتی</p>
-                  </a>
-                  <div class="d-flex align-items-center justify-content-end mt-2">
-                    <div class="d-flex align-items-center justify-content-end gap-2 fs-14 text-dark">
-                      <img alt="resend" src="assets/img/clock.svg">
-                      <p class="mb-0 text-secondary font-bold">02:15 مانده تا دریافت کد مجدد</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer border-0">
-                <button type="button" class="btn btn-info text-white font-bold w-100">تایید کد امنیتی</button>
-              </div>
-            </form>
-          </div>
-        </div>
-  
-    <!-- header -->
-    <header class="py-3">
-      <!-- overlay -->
-      <div id="overlay" class="position-fixed end-0 top-0 start-0 bottom-0 d-lg-none"></div>
-      <div class="d-flex container align-items-center gap-4 justify-content-between">
-        <!-- ham icon -->
-        <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
-          class="bi bi-list d-xl-none cursor flex-shrink-0" viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-        </svg>
-        <div class="d-flex flex-column flex-md-row align-items-center gap-3">
-          <div class="d-flex align-items-center gap-4 justify-content-between w-100">
-            <!-- logo -->
-            <a>
-              <img alt="logo" src="assets/img/Frame 9249.png">
+            <a class="d-flex align-items-center justify-content-end font-bold gap-2 mt-2 fs-14 text-dark">
+              <img alt="resend" src="assets/img/arrow-path.svg">
+              <p class="mb-0">ارسال مجدد کد امنیتی</p>
             </a>
-            <!-- nav -->
-            <nav>
-              <ul
-                class="list-unstyled m-0 p-xl-0 p-3 d-flex flex-column flex-xl-row align-items-xl-center gap-4 text-secondary fw-bold">
-                <li><a>اداری معدنی</a></li>
-                <li><a>فنی مهندسی</a></li>
-                <li><a>پیمانکاری معدن</a></li>
-                <li><a>درباره ما</a></li>
-                <li><a>تماس با ما</a></li>
-                <li>
-                  <a
-                    class="btn btn-info py-2 px-3 d-xl-none d-flex align-items-center font-bold text-white justify-content-center gap-2 fs-7">
-                    <img alt="login" src="assets/img/login.svg" class="w-15">
-                    <span>ثبت نام / ورود</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <div class="d-flex align-items-center justify-content-end mt-2">
+              <div class="d-flex align-items-center justify-content-end gap-2 fs-14 text-dark">
+                <img alt="resend" src="assets/img/clock.svg">
+                <p class="mb-0 text-secondary font-bold">02:15 مانده تا دریافت کد مجدد</p>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- language && login && search -->
-        <div class="d-flex align-items-center gap-3">
-          <div data-bs-toggle="modal" data-bs-target="#searchModal"
-            class="bg-orange d-none d-sm-flex cursor rounded-circle w-37 h-37 py-1 px-2 border align-items-center justify-content-center">
-            <img alt="search" src="assets/img/Vector.svg">
-          </div>
-          <div class="language position-relative cursor">
-            <div class="d-flex align-items-center gap-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-              <img alt="language" src="assets/img/artwork.png">
-              <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
-            </div>
-            <ul class="dropdown-menu p-0 m-0 font-bold bg-white shadow-sm rounded-4">
-              <li class="d-flex align-items-center justify-content-center py-3 gap-3 border-bottom">
-                <img alt="language" src="assets/img/artwork.png">
-                <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
-              </li>
-              <li class="d-flex align-items-center justify-content-center py-3 gap-3">
-                <img alt="language" src="assets/img/artwork.png">
-                <p class="mb-0 fw-bold fs-7 text-secondary">English</p>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-info text-white font-bold w-100">تایید کد امنیتی</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- header -->
+  <header class="py-3">
+    <!-- overlay -->
+    <div id="overlay" class="position-fixed end-0 top-0 start-0 bottom-0 d-lg-none"></div>
+    <div class="d-flex container align-items-center gap-4 justify-content-between">
+      <!-- ham icon -->
+      <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
+        class="bi bi-list d-xl-none cursor flex-shrink-0" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+      </svg>
+      <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+        <div class="d-flex align-items-center gap-4 justify-content-between w-100">
+          <!-- logo -->
+          <a>
+            <img alt="logo" src="assets/img/Frame 9249.png">
+          </a>
+          <!-- nav -->
+          <nav>
+            <ul
+              class="list-unstyled m-0 p-xl-0 p-3 d-flex flex-column flex-xl-row align-items-xl-center gap-4 text-secondary fw-bold">
+              <li><a>اداری معدنی</a></li>
+              <li><a>فنی مهندسی</a></li>
+              <li><a>پیمانکاری معدن</a></li>
+              <li><a>درباره ما</a></li>
+              <li><a>تماس با ما</a></li>
+              <li>
+                <a
+                  class="btn btn-info py-2 px-3 d-xl-none d-flex align-items-center font-bold text-white justify-content-center gap-2 fs-7">
+                  <img alt="login" src="assets/img/login.svg" class="w-15">
+                  <span>ثبت نام / ورود</span>
+                </a>
               </li>
             </ul>
-          </div>
-          <a
-            class="btn btn-info py-2 px-3 d-xl-flex d-none align-items-center font-bold text-white justify-content-center gap-2 fs-7">
-            <img alt="login" src="assets/img/login.svg" class="w-15">
-            <span>ثبت نام / ورود</span>
-          </a>
+          </nav>
         </div>
       </div>
-      <!-- mobile search -->
-      <div class="container mt-3">
-        <div
-          class="bg-orange d-flex d-sm-none cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
-          <input type="search" placeholder="جستجو..." class="form-control bg-transparent border-0 focus-none">
-          <div class="position-relative cursor">
-            <input type="submit"
-              class="position-absolute w-100 h-100 top-0 end-0 start-0 bottom-0 opacity-none z-10 cursor">
-            <img alt="search" src="assets/img/Vector.svg">
+      <!-- language && login && search -->
+      <div class="d-flex align-items-center gap-3">
+        <div data-bs-toggle="modal" data-bs-target="#searchModal"
+          class="bg-orange d-none d-sm-flex cursor rounded-circle w-37 h-37 py-1 px-2 border align-items-center justify-content-center">
+          <img alt="search" src="assets/img/Vector.svg">
+        </div>
+        <div class="language position-relative cursor">
+          <div class="d-flex align-items-center gap-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            <img alt="language" src="assets/img/artwork.png">
+            <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
           </div>
+          <ul class="dropdown-menu p-0 m-0 font-bold bg-white shadow-sm rounded-4">
+            <li class="d-flex align-items-center justify-content-center py-3 gap-3 border-bottom">
+              <img alt="language" src="assets/img/artwork.png">
+              <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
+            </li>
+            <li class="d-flex align-items-center justify-content-center py-3 gap-3">
+              <img alt="language" src="assets/img/artwork.png">
+              <p class="mb-0 fw-bold fs-7 text-secondary">English</p>
+            </li>
+          </ul>
+        </div>
+        <a
+          class="btn btn-info py-2 px-3 d-xl-flex d-none align-items-center font-bold text-white justify-content-center gap-2 fs-7">
+          <img alt="login" src="assets/img/login.svg" class="w-15">
+          <span>ثبت نام / ورود</span>
+        </a>
+      </div>
+    </div>
+    <!-- mobile search -->
+    <div class="container mt-3">
+      <div
+        class="bg-orange d-flex d-sm-none cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
+        <input type="search" placeholder="جستجو..." class="form-control bg-transparent border-0 focus-none">
+        <div class="position-relative cursor">
+          <input type="submit"
+            class="position-absolute w-100 h-100 top-0 end-0 start-0 bottom-0 opacity-none z-10 cursor">
+          <img alt="search" src="assets/img/Vector.svg">
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
   <!-- main -->
   <main>
@@ -467,16 +450,17 @@
     <!-- banner -->
     <section class="position-relative overflow-hidden">
       <!-- shape -->
-        <img alt="shape" src="assets/img/Polygon-map.png" class="position-absolute start-0">
-        <!-- shape -->
-        <svg class="position-absolute start-0 top-50" xmlns="http://www.w3.org/2000/svg" width="86" height="169" viewBox="0 0 86 169" fill="none">
-          <path d="M86 84.5L-0.999998 -1.03746e-06L-1 169L86 84.5Z" fill="white"/>
-          </svg>
-        <!--  -->
+      <img alt="shape" src="assets/img/Polygon-map.png" class="position-absolute start-0">
+      <!-- shape -->
+      <svg class="position-absolute start-0 top-50" xmlns="http://www.w3.org/2000/svg" width="86" height="169"
+        viewBox="0 0 86 169" fill="none">
+        <path d="M86 84.5L-0.999998 -1.03746e-06L-1 169L86 84.5Z" fill="white" />
+      </svg>
+      <!--  -->
       <div class="container position-relative">
         <div class="row g-4 align-items-center">
           <div class="col-lg-6 order-1 order-lg-0">
-            <h3 class="font-bold after text-gray">خدمات فنی مهندسی  </h3>
+            <h3 class="font-bold after text-gray">خدمات فنی مهندسی </h3>
             <p class="fw-bold mt-5 mb-2 lh-lg">
               سجامک با بهره‌گیری از تیم متخصص و تجهیزات پیشرفته،
             </p>
@@ -499,7 +483,7 @@
         </div>
       </div>
     </section>
-    
+
     <!-- services -->
     <section id="first-section" class="bg-gray py-5 position-relative">
       <!-- polygon -->
@@ -507,28 +491,32 @@
       <div class="container">
         <div class="row g-4 text-center font-bold">
           <div class="col-lg-3 col-md-6">
-            <a data-bs-toggle="modal" data-bs-target="#formModal" class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
+            <a data-bs-toggle="modal" data-bs-target="#formModal"
+              class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
               <img alt="services" src="assets/img/mapping.png" class="img-fluid">
               <p>نقشه برداری
               </p>
             </a>
           </div>
           <div class="col-lg-3 col-md-6">
-            <a data-bs-toggle="modal" data-bs-target="#formModal" class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
+            <a data-bs-toggle="modal" data-bs-target="#formModal"
+              class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
               <img alt="services" src="assets/img/pay.png" class="img-fluid">
               <p>پی جویی
               </p>
             </a>
           </div>
           <div class="col-lg-3 col-md-6">
-            <a data-bs-toggle="modal" data-bs-target="#formModal" class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
+            <a data-bs-toggle="modal" data-bs-target="#formModal"
+              class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
               <img alt="services" src="assets/img/report.png" class="img-fluid">
               <p>گزارش حمل اکتشاف
               </p>
             </a>
           </div>
           <div class="col-lg-3 col-md-6">
-            <a data-bs-toggle="modal" data-bs-target="#formModal" class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
+            <a data-bs-toggle="modal" data-bs-target="#formModal"
+              class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
               <img alt="services" src="assets/img/lab.png" class="img-fluid">
               <p>آزمایشگاه
               </p>
@@ -707,8 +695,11 @@
         <!-- more -->
         <a class="d-flex font-bold fs-14 mt-5 align-items-center justify-content-center gap-1 cursor text-secondary">
           <p class="mb-0">مشاهده بیشتر</p>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z">
+            </path>
           </svg>
         </a>
       </div>
@@ -722,40 +713,48 @@
         <div class="accordion font-bold fs-14 mt-4" id="accordionExample">
           <div class="accordion-item mb-4 border rounded-3 overflow-hidden">
             <h2 class="accordion-header">
-              <button class="accordion-button d-flex align-items-center gap-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button class="accordion-button d-flex align-items-center gap-4" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 <img alt="accordion" src="assets/img/message-question.svg">
                 <p class="mb-0 text-gray text-end">سجامک چیست؟</p>
               </button>
             </h2>
             <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
               </div>
             </div>
           </div>
           <div class="accordion-item mb-4 border rounded-3 overflow-hidden">
             <h2 class="accordion-header">
-              <button class="accordion-button d-flex align-items-center gap-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button class="accordion-button d-flex align-items-center gap-4 collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo">
                 <img alt="accordion" src="assets/img/message-question.svg">
                 <p class="mb-0 text-gray text-end">چگونه می توانم در سجامک ثبت نام کنم؟</p>
               </button>
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
               </div>
             </div>
           </div>
           <div class="accordion-item mb-4 border rounded-3 overflow-hidden">
             <h2 class="accordion-header">
-              <button class="accordion-button d-flex align-items-center gap-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button class="accordion-button d-flex align-items-center gap-4 collapsed" type="button"
+                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                aria-controls="collapseThree">
                 <img alt="accordion" src="assets/img/message-question.svg">
                 <p class="mb-0 text-gray text-end">آیا ثبت نام در سجامک کاملا رایگان است؟</p>
               </button>
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است.
               </div>
             </div>
           </div>
@@ -846,6 +845,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="assets/js/scrollreveal.min.js"></script>

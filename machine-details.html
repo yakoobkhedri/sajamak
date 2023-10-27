@@ -300,8 +300,7 @@
                   <div class="col-lg-6">
                     <div class="d-flex align-items-center justify-content-between gap-4">
                       <input data-bs-dismiss="modal" type="reset" value="انصراف" class="btn bg-gray3 w-100 py-2 font-bold mt-2 text-secondary">
-                      <a class="btn btn-info w-100 py-2 font-bold mt-2 text-white" data-bs-toggle="modal"
-                        data-bs-target="#submitModal">ثبت اطلاعات</a>
+                      <a class="btn btn-info w-100 py-2 font-bold mt-2 text-white" id="submit">ثبت اطلاعات</a>
                     </div>
                   </div>
                 </form>
@@ -311,26 +310,6 @@
         </div>
       </div>
     </div>
-
-  <!-- submit Modal -->
-  <div class="modal fade" id="submitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content text-center">
-        <div class="modal-header border-0">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img alt="success" src="assets/img/Ok.png" class="w-72">
-          <h5 class="text-success font-bold mt-3">درخواست موفق </h5>
-          <p class="text-gray">درخواست شما با موفقیت ثبت شد</p>
-          <p class="fs-14 text-gray">شماره پیگیری:2369894 </p>
-        </div>
-        <div class="modal-footer border-0">
-          <button type="button" class="btn btn-info text-white font-bold w-100">نمایش درخواست</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
    <!-- auth Modal -->
    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -773,6 +752,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="assets/js/scrollreveal.min.js"></script>
