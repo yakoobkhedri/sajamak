@@ -21,6 +21,10 @@ body {
     cursor: pointer;
 }
 
+.ltr{
+    direction: ltr;
+}
+
 .z-1 {
     z-index: -1;
 }

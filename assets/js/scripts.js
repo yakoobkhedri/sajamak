@@ -1,4 +1,3 @@
-
 // mobile menu
 
 let hamIcon = document.getElementById('hamIcon');
@@ -14,20 +13,20 @@ hamIcon.addEventListener('click', function () {
 
 // banner slider
 
-let smallImgs=Array.from(document.getElementsByClassName('smallImgs'));
-let bigImg=Array.from(document.getElementsByClassName('bigImg'));
+let smallImgs = Array.from(document.getElementsByClassName('smallImgs'));
+let bigImg = Array.from(document.getElementsByClassName('bigImg'));
 
 smallImgs.forEach((tab) => {
   tab.addEventListener('click', function () {
-      let tabId = tab.dataset.id;
-      bigImg.forEach((content) => {
-          let contentId = content.dataset.id;
-          if (tabId === contentId) {
-              content.style.display='block';
-          } else {
-            content.style.display='none';
-          }
-      })
+    let tabId = tab.dataset.id;
+    bigImg.forEach((content) => {
+      let contentId = content.dataset.id;
+      if (tabId === contentId) {
+        content.style.display = 'block';
+      } else {
+        content.style.display = 'none';
+      }
+    })
   })
 })
 
@@ -105,15 +104,15 @@ Fancybox.bind("[data-fancybox]", {
 
 // sweet alert
 
-let submitForm=document.getElementById('submit');
+let submitForm = document.getElementById('submit');
 
-submitForm.addEventListener('click',function (e) {
+submitForm.addEventListener('click', function (e) {
   e.preventDefault();
   Swal.fire({
     position: 'top-center',
     showConfirmButton: false,
     timer: 3000,
-    html:`
+    html: `
     <div class="modal-dialog modal-dialog-centered border-0">
     <div class="modal-content text-center border-0">
       <div class="modal-body">
@@ -129,4 +128,5 @@ submitForm.addEventListener('click',function (e) {
   </div>
     `
   })
-})
+});
+
