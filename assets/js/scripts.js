@@ -3,7 +3,7 @@
 let hamIcon = document.getElementById('hamIcon');
 
 hamIcon.addEventListener('click', function () {
-  hamIcon.nextElementSibling.querySelector('nav').classList.add('active');
+  hamIcon.nextElementSibling.nextElementSibling.classList.add('active');
   document.getElementById('overlay').classList.add('active');
   document.getElementById('overlay').addEventListener('click', function () {
     this.classList.remove('active');

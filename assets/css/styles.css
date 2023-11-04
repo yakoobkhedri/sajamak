@@ -386,7 +386,7 @@ header nav li .megaMenu{
     display: none;
     border-radius: 0 0 12px 12px;
   border-top: 1px solid lightgray;
-  box-shadow: 0 6px 7px -3px lightgray;
+  box-shadow: 0 6px 5px -3px lightgray;
 }
 
 header nav li:hover .megaMenu{
@@ -522,6 +522,15 @@ footer .arrow-link {
         color: white !important;
     }
 
+    header .h-100{
+        height: auto!important;
+    }
+    .megaMenu{
+        display: none!important;
+    }
+    header nav li a svg{
+        stroke: white!important;
+    }
     #overlay {
         background-color: rgba(0, 0, 0, 0.47);
         z-index: 90;
