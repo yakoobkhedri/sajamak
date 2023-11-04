@@ -369,6 +369,10 @@ div:where(.swal2-container) .swal2-html-container {
    margin: 0!important;
 }
 /* header */
+header{
+    height: 70px;
+}
+
 header li a {
     color: #6c757d !important;
 }
@@ -378,8 +382,23 @@ header ul li a.active {
     color: #00BED8 !important;
 }
 
+header nav li .megaMenu{
+    display: none;
+    border-radius: 0 0 12px 12px;
+  border-top: 1px solid lightgray;
+  box-shadow: 0 6px 7px -3px lightgray;
+}
+
+header nav li:hover .megaMenu{
+    display: block;
+}
+
 header .megaMenu{
     top: 70px;
+}
+
+.megaMenu > div > div:hover{
+    box-shadow: 0 0 9px 1px lightgray;
 }
 /* banner */
 .bigImg{
