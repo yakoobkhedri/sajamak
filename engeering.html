@@ -355,42 +355,87 @@
   </div>
 
   <!-- header -->
-  <header class="py-3">
+  <header class="position-relative">
     <!-- overlay -->
     <div id="overlay" class="position-fixed end-0 top-0 start-0 bottom-0 d-lg-none"></div>
-    <div class="d-flex container align-items-center gap-4 justify-content-between">
+    <div class="d-flex container align-items-center gap-4 h-100 justify-content-between">
       <!-- ham icon -->
       <svg id="hamIcon" xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="currentColor"
         class="bi bi-list d-xl-none cursor flex-shrink-0" viewBox="0 0 16 16">
         <path fill-rule="evenodd"
           d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
       </svg>
+      <!-- logo -->
       <div class="d-flex flex-column flex-md-row align-items-center gap-3">
         <div class="d-flex align-items-center gap-4 justify-content-between w-100">
           <!-- logo -->
-          <a>
+          <a href="index.html">
             <img alt="logo" src="assets/img/Frame 9249.png">
           </a>
-          <!-- nav -->
-          <nav>
-            <ul
-              class="list-unstyled m-0 p-xl-0 p-3 d-flex flex-column flex-xl-row align-items-xl-center gap-4 text-secondary fw-bold">
-              <li><a>اداری معدنی</a></li>
-              <li><a>فنی مهندسی</a></li>
-              <li><a>پیمانکاری معدن</a></li>
-              <li><a>درباره ما</a></li>
-              <li><a>تماس با ما</a></li>
-              <li>
-                <a
-                  class="btn btn-info py-2 px-3 d-xl-none d-flex align-items-center font-bold text-white justify-content-center gap-2 fs-7">
-                  <img alt="login" src="assets/img/login.svg" class="w-15">
-                  <span>ثبت نام / ورود</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
         </div>
       </div>
+      <!-- nav -->
+      <nav class="me-xl-5 h-100">
+        <ul
+          class="list-unstyled h-100 m-0 p-xl-0 p-3 d-flex flex-column flex-xl-row align-items-xl-center gap-4 text-secondary fw-bold">
+          <li class="h-100"><a href="index.html" class="h-100 d-flex align-items-center">صفحه اصلی</a></li>
+          <li class="h-100">
+            <a class="active d-flex h-100 align-items-center justify-content-between justify-content-xl-start gap-2 h-100">
+              <p class="mb-0">خدمات</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                <path
+                  d="M6.00001 8.90031C5.65001 8.90031 5.30001 8.76531 5.03501 8.50031L1.77501 5.24031C1.63001 5.09531 1.63001 4.85531 1.77501 4.71031C1.92001 4.56531 2.16001 4.56531 2.30501 4.71031L5.56501 7.97031C5.80501 8.21031 6.19501 8.21031 6.43501 7.97031L9.69501 4.71031C9.84001 4.56531 10.08 4.56531 10.225 4.71031C10.37 4.85531 10.37 5.09531 10.225 5.24031L6.96501 8.50031C6.70001 8.76531 6.35001 8.90031 6.00001 8.90031Z"
+                  fill="#1F2A37" />
+              </svg>
+            </a>
+            <div class="position-absolute bg-white end-0 start-0 megaMenu p-3 w-100 z-10 container">
+              <div class="row mx-0 text-center font-bold">
+                <div class="col-lg-3 col-md-6 rounded-3 transition">
+                  <a href="official.html"
+                    class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
+                    <img alt="services" src="assets/img/official.png" class="img-fluid">
+                    <p>امور اداری معدنی
+                    </p>
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-6 rounded-3 transition">
+                  <a href="engeering.html"
+                    class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
+                    <img alt="services" src="assets/img/engineer.png" class="img-fluid">
+                    <p class="mt-3">خدمات فنی مهندسی
+                    </p>
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-6 rounded-3 transition">
+                  <a href="contractor.html"
+                    class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
+                    <img alt="services" src="assets/img/constractor.png" class="img-fluid">
+                    <p>پیمانکاری معدن
+                    </p>
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-6 rounded-3 transition">
+                  <a href="mining-products.html"
+                    class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
+                    <img alt="services" src="assets/img/mine-buy.png" class="img-fluid">
+                    <p>مواد و محصولات معدنی
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="h-100"><a href="about.html" class=" h-100 d-flex align-items-center">درباره ما</a></li>
+          <li class="h-100"><a href="contact.html" class=" h-100 d-flex align-items-center">تماس با ما</a></li>
+          <li class="h-100">
+            <a href="register-login.html"
+              class="btn btn-info py-2 px-3 d-xl-none d-flex align-items-center font-bold text-white justify-content-center gap-2 fs-7">
+              <img alt="login" src="assets/img/login.svg" class="w-15">
+              <span>ثبت نام / ورود</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
       <!-- language && login && search -->
       <div class="d-flex align-items-center gap-3">
         <div data-bs-toggle="modal" data-bs-target="#searchModal"
@@ -403,14 +448,13 @@
             <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
           </div>
           <ul class="dropdown-menu p-0 m-0 font-bold bg-white shadow-sm rounded-4">
-            <li class="d-flex align-items-center justify-content-center py-3 gap-3 border-bottom">
+            <li class="d-flex align-items-center p-3 gap-3">
               <img alt="language" src="assets/img/artwork.png">
               <p class="mb-0 fw-bold fs-7 text-secondary">فارسی</p>
             </li>
-       
           </ul>
         </div>
-        <a
+        <a href="register-login.html"
           class="btn btn-info py-2 px-3 d-xl-flex d-none align-items-center font-bold text-white justify-content-center gap-2 fs-7">
           <img alt="login" src="assets/img/login.svg" class="w-15">
           <span>ثبت نام / ورود</span>
@@ -418,7 +462,7 @@
       </div>
     </div>
     <!-- mobile search -->
-    <div class="container mt-3">
+    <div class="container my-3 my-lg-0">
       <div
         class="bg-orange d-flex d-sm-none cursor rounded-3 w-100 h-37 py-1 px-2 border align-items-center justify-content-between gap-2">
         <input type="search" placeholder="جستجو..." class="form-control bg-transparent border-0 focus-none">
