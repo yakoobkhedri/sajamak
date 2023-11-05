@@ -34,6 +34,55 @@
     </div>
   </div>
 
+  <!-- login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header py-3 border-bottom-0 mt-3 ms-3">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row mx-0">
+            <div class="col-12 px-5 py-3">
+              <div class="max-w-390 mx-auto">
+                <h5 class="font-bold mb-4 text-center">ورود به حساب کاربری</h5>
+                <form class="formLogin">
+                  <label class="d-flex align-items-center gap-2">
+                    <img src="assets/img/key2.svg">
+                    <p class="text-muted font-bold fs-14 mb-0">رمز عبور</p>
+                  </label>
+                  <input id="pass" type="password" placeholder="رمز عبور را وارد نمایید. (کدملی)"
+                    class="form-control mt-3 border">
+                  <small class="text-danger fs-14 mt-2 font-bold d-none">رمز عبور اشتباه است</small>
+                  <div class="d-flex align-items-center justify-content-between mt-3">
+                    <label class="cursor text-secondary fs-7 font-bold">
+                      <input type="checkbox" class="form-check-input cursor ms-2">
+                      مرا بخاطر بسپار
+                    </label>
+                    <a class="text-secondary font-bold fs-7">رمزتان را فراموش کرده اید؟</a>
+                  </div>
+                  <input type="submit" id="loginButton" class="btn btn-info text-white font-bold w-100 mt-5 py-3"
+                    value="ورود">
+                </form>
+                <p class="fs-14 text-center mt-5 pt-5 px-4">
+                  با ثبت نام در سامانه جامع اجرایی معادن کشور ، <span class="font-bold">شرایط و قوانین</span> استفاده از
+                  سرویس‌های سایت را می پذیرم.
+                </p>
+                <img alt="divider" src="assets/img/divider.svg" class="d-block mx-auto img-fluid">
+                <ul
+                  class="list-unstyled flex-wrap fs-14 font-bold d-flex align-items-center justify-content-center gap-4 mt-3">
+                  <li><a href="index.html" class="text-secondary">صفحه اصلی</a></li>
+                  <li><a class="text-secondary">شرایط و قوانین</a></li>
+                  <li><a class="text-secondary">حریم خصوصی</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- form Modal -->
   <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -312,16 +361,16 @@
     </div>
   </div>
 
-    <!-- app Modal -->
-    <div class="modal fade" id="appModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <h5 class="mb-0 fw-bold">اپلیکیشن در حال به روز رسانی است...</h5>
-          </div>
+  <!-- app Modal -->
+  <div class="modal fade" id="appModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5 class="mb-0 fw-bold">اپلیکیشن در حال به روز رسانی است...</h5>
         </div>
       </div>
     </div>
+  </div>
 
   <!-- header -->
   <header class="position-relative">
@@ -352,27 +401,32 @@
             <a class="d-flex h-100 align-items-center justify-content-between justify-content-xl-start gap-2 h-100">
               <p class="mb-0">خدمات</p>
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                <path d="M6.00001 8.90031C5.65001 8.90031 5.30001 8.76531 5.03501 8.50031L1.77501 5.24031C1.63001 5.09531 1.63001 4.85531 1.77501 4.71031C1.92001 4.56531 2.16001 4.56531 2.30501 4.71031L5.56501 7.97031C5.80501 8.21031 6.19501 8.21031 6.43501 7.97031L9.69501 4.71031C9.84001 4.56531 10.08 4.56531 10.225 4.71031C10.37 4.85531 10.37 5.09531 10.225 5.24031L6.96501 8.50031C6.70001 8.76531 6.35001 8.90031 6.00001 8.90031Z" fill="#1F2A37"/>
-                </svg>
+                <path
+                  d="M6.00001 8.90031C5.65001 8.90031 5.30001 8.76531 5.03501 8.50031L1.77501 5.24031C1.63001 5.09531 1.63001 4.85531 1.77501 4.71031C1.92001 4.56531 2.16001 4.56531 2.30501 4.71031L5.56501 7.97031C5.80501 8.21031 6.19501 8.21031 6.43501 7.97031L9.69501 4.71031C9.84001 4.56531 10.08 4.56531 10.225 4.71031C10.37 4.85531 10.37 5.09531 10.225 5.24031L6.96501 8.50031C6.70001 8.76531 6.35001 8.90031 6.00001 8.90031Z"
+                  fill="#1F2A37" />
+              </svg>
             </a>
             <div class="position-absolute bg-white end-0 start-0 megaMenu p-3 w-100 z-10 container">
               <div class="row mx-0 text-center font-bold">
                 <div class="col-lg-3 col-md-6 rounded-3 transition">
-                  <a href="official.html" class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
+                  <a href="official.html"
+                    class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
                     <img alt="services" src="assets/img/official.png" class="img-fluid">
                     <p>امور اداری معدنی
                     </p>
                   </a>
                 </div>
                 <div class="col-lg-3 col-md-6 rounded-3 transition">
-                  <a href="engeering.html" class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
+                  <a href="engeering.html"
+                    class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
                     <img alt="services" src="assets/img/engineer.png" class="img-fluid">
                     <p class="mt-3">خدمات فنی مهندسی
                     </p>
                   </a>
                 </div>
                 <div class="col-lg-3 col-md-6 rounded-3 transition">
-                  <a href="contractor.html" class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
+                  <a href="contractor.html"
+                    class="bg-white d-block text-secondary rounded-3 py-4 service position-relative">
                     <img alt="services" src="assets/img/constractor.png" class="img-fluid">
                     <p>پیمانکاری معدن
                     </p>
@@ -418,7 +472,7 @@
             </li>
           </ul>
         </div>
-        <a href="register-login.html"
+        <a data-bs-toggle="modal" data-bs-target="#loginModal"
           class="btn btn-info py-2 px-3 d-xl-flex d-none align-items-center font-bold text-white justify-content-center gap-2 fs-7">
           <img alt="login" src="assets/img/login.svg" class="w-15">
           <span>ثبت نام / ورود</span>
@@ -928,7 +982,8 @@
                 <div class="d-flex align-items-center gap-2 mt-5">
                   <img alt="app" class="cursor" data-bs-toggle="modal" data-bs-target="#appModal"
                     src="assets/img/kisspng-computer-icons-apple-athlone-credit-union-limited-apple-5acacb62355627 1.svg">
-                  <img alt="app" class="cursor" data-bs-toggle="modal" data-bs-target="#appModal" src="assets/img/android-flat 1.svg">
+                  <img alt="app" class="cursor" data-bs-toggle="modal" data-bs-target="#appModal"
+                    src="assets/img/android-flat 1.svg">
                   <p class="text-secondary mb-0 fs-8 fw-bold"> قابل نصب بر روی Android و IOS</p>
                 </div>
               </div>
@@ -1056,7 +1111,8 @@
       <div
         class="d-flex flex-column flex-lg-row gap-2 text-center text-lg-end align-items-center justify-content-between text-secondary fs-7 fw-bold py-3 border-top">
         <p class="mb-0">کلیه حقوق این سایت متعلق به سامانه جامع اجرایی معادن کشور می باشد.</p>
-        <p class="mb-0">توسعه و پیاده سازی <a href="https://vatadigital.com/" class="text-decoration-underline text-secondary">واتادیجیتال</a></p>
+        <p class="mb-0">توسعه و پیاده سازی <a href="https://vatadigital.com/"
+            class="text-decoration-underline text-secondary">واتادیجیتال</a></p>
         <p class="mb-0">2021-2022 © | شرایط و ضوابط . سیاست حفظ حریم خصوصی</p>
       </div>
     </div>
@@ -1068,6 +1124,7 @@
   <script src="assets/js/scrollreveal.min.js"></script>
   <script src="assets/js/scripts.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/validateForm.js"></script>
 </body>
 
 </html>

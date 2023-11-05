@@ -312,6 +312,55 @@
     </div>
   </div>
 
+   <!-- login Modal -->
+   <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header py-3 border-bottom-0 mt-3 ms-3">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row mx-0">
+            <div class="col-12 px-5 py-3">
+              <div class="max-w-390 mx-auto">
+                <h5 class="font-bold mb-4 text-center">ورود به حساب کاربری</h5>
+                <form class="formLogin">
+                  <label class="d-flex align-items-center gap-2">
+                    <img src="assets/img/key2.svg">
+                    <p class="text-muted font-bold fs-14 mb-0">رمز عبور</p>
+                  </label>
+                  <input id="pass" type="password" placeholder="رمز عبور را وارد نمایید. (کدملی)"
+                    class="form-control mt-3 border">
+                  <small class="text-danger fs-14 mt-2 font-bold d-none">رمز عبور اشتباه است</small>
+                  <div class="d-flex align-items-center justify-content-between mt-3">
+                    <label class="cursor text-secondary fs-7 font-bold">
+                      <input type="checkbox" class="form-check-input cursor ms-2">
+                      مرا بخاطر بسپار
+                    </label>
+                    <a class="text-secondary font-bold fs-7">رمزتان را فراموش کرده اید؟</a>
+                  </div>
+                  <input type="submit" id="loginButton" class="btn btn-info text-white font-bold w-100 mt-5 py-3"
+                    value="ورود">
+                </form>
+                <p class="fs-14 text-center mt-5 pt-5 px-4">
+                  با ثبت نام در سامانه جامع اجرایی معادن کشور ، <span class="font-bold">شرایط و قوانین</span> استفاده از
+                  سرویس‌های سایت را می پذیرم.
+                </p>
+                <img alt="divider" src="assets/img/divider.svg" class="d-block mx-auto img-fluid">
+                <ul
+                  class="list-unstyled flex-wrap fs-14 font-bold d-flex align-items-center justify-content-center gap-4 mt-3">
+                  <li><a href="index.html" class="text-secondary">صفحه اصلی</a></li>
+                  <li><a class="text-secondary">شرایط و قوانین</a></li>
+                  <li><a class="text-secondary">حریم خصوصی</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- auth Modal -->
   <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -454,11 +503,11 @@
             </li>
           </ul>
         </div>
-        <a href="register-login.html"
-          class="btn btn-info py-2 px-3 d-xl-flex d-none align-items-center font-bold text-white justify-content-center gap-2 fs-7">
-          <img alt="login" src="assets/img/login.svg" class="w-15">
-          <span>ثبت نام / ورود</span>
-        </a>
+        <a data-bs-toggle="modal" data-bs-target="#loginModal"
+        class="btn btn-info py-2 px-3 d-xl-flex d-none align-items-center font-bold text-white justify-content-center gap-2 fs-7">
+        <img alt="login" src="assets/img/login.svg" class="w-15">
+        <span>ثبت نام / ورود</span>
+      </a>
       </div>
     </div>
     <!-- mobile search -->
@@ -887,6 +936,7 @@
   <script src="assets/js/scrollreveal.min.js"></script>
   <script src="assets/js/scripts.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/validateForm.js"></script>
 </body>
 
 </html>
