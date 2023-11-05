@@ -362,7 +362,7 @@ a {
     stroke: white;
 }
 
-#formModal .modal-dialog {
+#formModal .modal-dialog,#lawModal .modal-dialog {
     max-width: 1060px;
 }
 div:where(.swal2-container) .swal2-html-container {
