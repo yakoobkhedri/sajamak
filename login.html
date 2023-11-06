@@ -31,7 +31,13 @@
             <img src="assets/img/key2.svg">
             <p class="text-muted font-bold fs-14 mb-0">رمز عبور</p>
           </label>
-          <input id="pass" type="password" placeholder="رمز عبور را وارد نمایید. (کدملی)" class="form-control mt-3 border">
+          <div class="d-flex align-items-center justify-content-between p-2 border rounded-3 mt-2">
+            <input type="password" id="pass1" class="form-control flex-grow-1 border-0" value="">
+            <div id="togglePassword">
+              <img alt="seen" src="assets/img/eye.svg" class="cursor">
+              <img alt="unseen" src="assets/img/eye-slash.svg" class="cursor d-none">
+            </div>
+        </div>
           <small class="text-danger fs-14 mt-2 font-bold d-none">رمز عبور اشتباه است</small>
           <div class="d-flex align-items-center justify-content-between mt-3">
             <label class="cursor text-secondary fs-7 font-bold">
@@ -67,6 +73,7 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>
   <script src="assets/js/validateForm.js"></script>
+  <script src="assets/js/showPassword.js"></script>
 </body>
 
 </html>

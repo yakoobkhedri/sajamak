@@ -493,6 +493,13 @@ header .megaMenu{
     display: none !important;
 }
 
+#togglePassword.bi-eye img[alt="seen"],#togglePassword2.bi-eye img[alt="seen"]{
+    display: none;
+}
+#togglePassword.bi-eye img[alt="unseen"],#togglePassword2.bi-eye img[alt="unseen"]{
+    display: block!important;
+}
+
 /* footer */
 footer .arrow-link {
     transform: rotate(180deg);
