@@ -111,6 +111,14 @@ a {
     height: 37px;
 }
 
+.h-16{
+    height: 16px;
+}
+
+.w-16{
+    width: 16px;
+}
+
 .w-30 {
     width: 30px;
 }
@@ -466,6 +474,9 @@ header .megaMenu{
 .filterContent.active {
     max-height: 1000px;
     padding: 10px 0 !important;
+}
+.checkAll.active .checkbox{
+    background-color: #0d6efd;
 }
 
 /* login page */

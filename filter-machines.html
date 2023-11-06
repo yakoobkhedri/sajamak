@@ -257,40 +257,46 @@
                 </div>
                 <!--  -->
                 <div class="filterContent active transition overflow-hidden">
-                   <label class="cursor form-label d-block">
-                    <input type="checkbox" class="form-check-input ms-2 cursor">
+                   <label class="cursor form-label gap-3 d-flex align-items-center position-relative checkAll">
+                    <input type="checkbox" class="form-check-input ms-2 cursor position-absolute z-10 top-0 bottom-0 start-0 end-0 opacity-none">
+                    <div class="w-16 h-16 border border-dark rounded-1 d-flex align-items-center justify-content-center checkbox">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check text-white" viewBox="0 0 16 16">
+                        <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                      </svg>
+                    </div>
                     انتخاب همه
+                    <button class="position-absolute end-0 start-0 bottom-0 top-0 opacity-none" id="btn">Check / Uncheck All</button>
                    </label>
                    <label class="cursor form-label d-block">
-                    <input type="checkbox" class="form-check-input ms-2 cursor">
+                    <input type="checkbox" name="type" class="form-check-input ms-2 cursor border border-dark">
                     راه سازی و محدوده معدنی
                    </label>
                    <label class="cursor form-label d-block">
-                    <input type="checkbox" class="form-check-input ms-2 cursor">
+                    <input type="checkbox" name="type" class="form-check-input ms-2 cursor border border-dark">
                     حفاری و ترانشه ، اکتشافات
                    </label>
                    <label class="cursor form-label d-block">
-                    <input type="checkbox" class="form-check-input ms-2 cursor">
+                    <input type="checkbox" name="type" class="form-check-input ms-2 cursor border border-dark">
                     آتشکاری و انفجار
                    </label>
                    <label class="cursor form-label d-block">
-                    <input type="checkbox" class="form-check-input ms-2 cursor">
+                    <input type="checkbox" name="type" class="form-check-input ms-2 cursor border border-dark">
                     باطله برداری و استخراج
                    </label>
                    <label class="cursor form-label d-block">
-                    <input type="checkbox" class="form-check-input ms-2 cursor">
+                    <input type="checkbox" name="type" class="form-check-input ms-2 cursor border border-dark">
                     عملیات خاکی-حمل و نقل
                    </label>
                    <label class="cursor form-label d-block">
-                    <input type="checkbox" class="form-check-input ms-2 cursor">
+                    <input type="checkbox" name="type" class="form-check-input ms-2 cursor border border-dark">
                     برش ، خردایش، جدایش
                    </label>
                    <label class="cursor form-label d-block">
-                    <input type="checkbox" class="form-check-input ms-2 cursor">
+                    <input type="checkbox" name="type" class="form-check-input ms-2 cursor border border-dark">
                     انتقال مواد(نقاله،جرثقیل،...)
                    </label>
                    <label class="cursor form-label d-block">
-                    <input type="checkbox" class="form-check-input ms-2 cursor">
+                    <input type="checkbox" name="type" class="form-check-input ms-2 cursor border border-dark">
                     سایر
                    </label>
                 </div>
