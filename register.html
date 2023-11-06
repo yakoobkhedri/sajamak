@@ -27,11 +27,12 @@
         <h3 class="font-bold mt-5 py-5">ثبت نام حساب کاربری</h3>
         <form>
           <p class="mb-0 fs-14 text-secondary">تایید شماره موبایل  09123264568<a class="font-bold text-dark me-4">ویرایش</a></p>
-          <div class="rounded-3 ltr border overflow-hidden d-flex align-items-center justify-content-around mt-2">
-            <input maxlength="1" required placeholder="-" class="border-0 inputs outline-none flex-grow-1 w-25 text-center py-2">
-            <input maxlength="1" required placeholder="-" class="border-0 inputs outline-none flex-grow-1 w-25 text-center py-2">
-            <input maxlength="1" required placeholder="-" class="border-0 inputs outline-none flex-grow-1 w-25 text-center py-2">
-            <input maxlength="1" required placeholder="-" class="border-0 inputs outline-none flex-grow-1 w-25 text-center py-2">
+          <div id="otp-input" class="rounded-3 ltr border overflow-hidden d-flex align-items-center justify-content-around mt-2">
+            <input maxlength="1" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" placeholder="-" class="border-0 inputs outline-none flex-grow-1 w-25 text-center py-2">
+            <input maxlength="1" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" placeholder="-" class="border-0 inputs outline-none flex-grow-1 w-25 text-center py-2">
+            <input maxlength="1" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" placeholder="-" class="border-0 inputs outline-none flex-grow-1 w-25 text-center py-2">
+            <input maxlength="1" type="number" step="1" min="0" max="9" autocomplete="no" pattern="\d*" placeholder="-" class="border-0 inputs outline-none flex-grow-1 w-25 text-center py-2">
+            <input id="otp-value" placeholder="_" type="hidden" name="otp" />
           </div>
           <div class="d-none" id="resend">
             <a class="d-flex align-items-center justify-content-end font-bold gap-2 mt-2 fs-14 text-dark">
@@ -46,7 +47,7 @@
               <p class="mb-0 text-secondary"><span id="timer"></span> مانده تا دریافت کد مجدد</p>
             </div>
           </div>
-          <input type="submit" class="btn btn-info text-white font-bold w-100 mt-5 py-3" value="تایید">
+          <input type="submit" id="submit" class="btn btn-info text-white font-bold w-100 mt-5 py-3" value="تایید">
         </form>
         <p class="fs-14 text-center mt-5 pt-5 px-4">
           با ثبت نام در سامانه جامع اجرایی معادن کشور ، <span class="font-bold">شرایط و قوانین</span> استفاده از سرویس‌های سایت را می پذیرم.
@@ -66,12 +67,10 @@
 
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-  <script src="assets/js/scrollreveal.min.js"></script>
   <script src="assets/js/timer.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/autoNextFocus.js"></script>
+  <script src="assets/js/otp-input.js"></script>
 </body>
 
 </html>

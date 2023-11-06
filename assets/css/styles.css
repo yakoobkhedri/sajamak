@@ -499,6 +499,28 @@ header .megaMenu{
 #togglePassword.bi-eye img[alt="unseen"],#togglePassword2.bi-eye img[alt="unseen"]{
     display: block!important;
 }
+/* register page */
+#otp-input input {
+    text-align: center;
+    padding: 10px 8px 10px 8px;
+    border: 1px solid #adadad;
+    border-radius: 4px;
+    outline: none;
+  }
+  #otp-input input:focus {
+    border: 1px solid #497e76;
+  }
+  #otp-input input:focus::placeholder {
+    color: transparent;
+  }
+  #otp-input input::-webkit-outer-spin-button,
+  #otp-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  #otp-input input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+  }
 
 /* footer */
 footer .arrow-link {
