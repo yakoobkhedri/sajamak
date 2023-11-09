@@ -408,6 +408,11 @@ header .megaMenu{
 .megaMenu > div > div:hover{
     box-shadow: 0 0 9px 1px lightgray;
 }
+
+header .container.my-3.my-lg-0{
+    position: relative;
+    z-index: 10;
+}
 /* banner */
 .bigImg{
     display: none;
