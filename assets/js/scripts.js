@@ -81,34 +81,6 @@ var menuSwiper = new Swiper(".brands", {
   },
 });
 
-// sweet alert
-
-let submitForm = document.getElementById('submit');
-
-submitForm.addEventListener('click', function (e) {
-  e.preventDefault();
-  Swal.fire({
-    position: 'top-center',
-    showConfirmButton: false,
-    timer: 3000,
-    html: `
-    <div class="modal-dialog modal-dialog-centered border-0">
-    <div class="modal-content text-center border-0">
-      <div class="modal-body">
-        <img alt="success" src="assets/img/Ok.png" class="w-72">
-        <h5 class="text-success font-bold mt-3">درخواست موفق </h5>
-        <p class="text-gray">درخواست شما با موفقیت ثبت شد</p>
-        <p class="fs-14 text-gray">شماره پیگیری:2369894 </p>
-      </div>
-      <div class="modal-footer border-0">
-        <button type="button" class="btn btn-info py-2 text-white font-bold w-100">نمایش درخواست</button>
-      </div>
-    </div>
-  </div>
-    `
-  })
-});
-
 // filter
 
 let filterBtn = Array.from(document.getElementsByClassName('filterBtn'));
@@ -159,5 +131,31 @@ Fancybox.bind("[data-fancybox]", {
   // Your custom options
 });
 
+// sweet alert
 
+let submitForm = document.getElementById('submit');
+
+submitForm.addEventListener('click', function (e) {
+  e.preventDefault();
+  Swal.fire({
+    position: 'top-center',
+    showConfirmButton: false,
+    timer: 3000,
+    html: `
+    <div class="modal-dialog modal-dialog-centered border-0">
+    <div class="modal-content text-center border-0">
+      <div class="modal-body">
+        <img alt="success" src="assets/img/Ok.png" class="w-72">
+        <h5 class="text-success font-bold mt-3">درخواست موفق </h5>
+        <p class="text-gray">درخواست شما با موفقیت ثبت شد</p>
+        <p class="fs-14 text-gray">شماره پیگیری:2369894 </p>
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-info py-2 text-white font-bold w-100">نمایش درخواست</button>
+      </div>
+    </div>
+  </div>
+    `
+  })
+});
 
