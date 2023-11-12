@@ -115,3 +115,21 @@ submitForm.addEventListener('click', function (e) {
   })
 });
 
+    // Product Image Zoom plugin - product pages
+    if ($.fn.elevateZoom) {
+      $('#product-zoom').elevateZoom({
+          gallery: 'product-zoom-gallery',
+          galleryActiveClass: 'active',
+          zoomType: "",
+          cursor: "crosshair",
+          responsive: true
+      });
+
+      // On click change thumbs active item
+      $('.product-gallery-item').on('click', function (e) {
+          $('#product-zoom-gallery').find('a').removeClass('active');
+          $(this).addClass('active');
+
+          e.preventDefault();
+      });
+  }

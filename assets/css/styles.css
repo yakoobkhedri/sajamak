@@ -618,6 +618,9 @@ footer .arrow-link {
 }
 
 @media only screen and (max-width:576px) {
+    main{
+        margin-top: 60px
+    };
     .machine-img-box {
         height: auto;
     }

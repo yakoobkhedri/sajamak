@@ -591,16 +591,39 @@
             </div>
           </div>
           <div class="col-lg-4 order-0 order-lg-1 mt-5 mt-lg-0">
-            <img alt="banner" src="assets/img/stone1.png" data-id="1" class="img-fluid w-100 mx-auto bigImg">
-            <img alt="banner" src="assets/img/stone2.png" data-id="2" class="img-fluid w-100 mx-auto bigImg">
-            <img alt="banner" src="assets/img/stone3.png" data-id="3" class="img-fluid w-100 mx-auto bigImg">
-            <img alt="banner" src="assets/img/stone4.png" data-id="4" class="img-fluid w-100 mx-auto bigImg">
-            <div class="d-flex align-items-center justify-content-center gap-3 mt-3">
-              <img alt="banner" src="assets/img/stonesm1.png" data-id="1" class="w-25 d-block smallImgs cursor">
-              <img alt="banner" src="assets/img/stonesm2.png" data-id="2" class="w-25 d-block smallImgs cursor">
-              <img alt="banner" src="assets/img/stonesm3.png" data-id="3" class="w-25 d-block smallImgs cursor">
-              <img alt="banner" src="assets/img/stonesm4.png" data-id="4" class="w-25 d-block smallImgs cursor">
-            </div>
+            <div class="product-gallery product-gallery-vertical">
+              <div class="row">
+                <figure class="product-main-image">
+                  <img id="product-zoom" src="assets/img/products/single/stone1.png" class="img-fluid mx-auto d-block"
+                      alt="تصویر محصول">
+              </figure>
+
+              <div id="product-zoom-gallery" class="product-image-gallery d-flex align-items-center gap-3">
+                  <a class="product-gallery-item active" href="#"
+                      data-image="assets/img/products/single/stone1.png">
+                      <img class="img-fluid" src="assets/img/products/single/stone1.png"
+                          alt="توضیحات تصویر">
+                  </a>
+
+                  <a class="product-gallery-item" href="#"
+                      data-image="assets/img/products/single/stone2.png">
+                      <img class="img-fluid" src="assets/img/products/single/stone2.png"
+                          alt="توضیحات تصویر">
+                  </a>
+
+                  <a class="product-gallery-item" href="#"
+                      data-image="assets/img/products/single/stone3.png">
+                      <img class="img-fluid" src="assets/img/products/single/stone3.png"
+                          alt="توضیحات تصویر">
+                  </a>
+
+                  <a class="product-gallery-item" href="#"
+                      data-image="assets/img/products/single/stone4.png">
+                      <img class="img-fluid" src="assets/img/products/single/stone4.png" alt="product back">
+                  </a>
+              </div>
+              </div>
+          </div>
           </div>
         </div>
       </div>
@@ -991,9 +1014,11 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="assets/js/scrollreveal.min.js"></script>
-  <script src="assets/js/scripts.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/validateForm.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.elevateZoom.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
