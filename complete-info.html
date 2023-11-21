@@ -26,26 +26,28 @@
           </a>
           <h3 class="font-bold mb-5 mt-4">تکمیل اطلاعات</h3>
           <ul class="nav nav-tabs p-0" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <label class="fs-14 pe-0 text-secondary font-bold cursor nav-link active" id="mine-tab"
-                data-bs-toggle="tab" data-bs-target="#mine-tab-pane" type="button" role="tab"
-                aria-controls="mine-tab-pane" aria-selected="true">
+            <li class="nav-item">
+              <label class="fs-14 pe-0 text-secondary font-bold cursor nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                <input type="radio" checked name="role" class="form-check-input cursor ms-2">
+                کاربر عادی
+              </label>
+            </li>
+            <li class="nav-item">
+              <label class="fs-14 pe-0 text-secondary font-bold cursor nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
                 <input type="radio" checked name="role" class="form-check-input cursor ms-2">
                 مالک معدن
               </label>
             </li>
-            <li class="nav-item" role="presentation">
-              <label class="fs-14 text-secondary font-bold cursor nav-link" id="contractor-tab" data-bs-toggle="tab"
-                data-bs-target="#contractor-tab-pane" type="button" role="tab" aria-controls="contractor-tab-pane"
-                aria-selected="true">
+            <li class="nav-item">
+              <label class="fs-14 text-secondary font-bold cursor nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
                 <input type="radio" name="role" class="form-check-input cursor ms-2">
                 پیمانکار
               </label>
             </li>
           </ul>
           <div class="tab-content" id="myTabContent">
-            <form action="complete-info2.html" class="row mt-2 g-4 font-bold mb-4 tab-pane fade show active"
-              id="mine-tab-pane" role="tabpanel" aria-labelledby="mine-tab" tabindex="0">
+                <form action="complete-info2.html" class="row mt-2 g-4 font-bold mb-4 tab-pane fade show active"
+                id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
               <div class="col-12 px-0">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">کدملی</label>
@@ -96,7 +98,58 @@
               <input type="submit" value="ثبت اطلاعات" class="btn text-white font-bold py-2 w-100 bg-info">
             </form>
             <form action="complete-info2.html" class="row mt-2 g-4 font-bold mb-4 tab-pane fade"
-              id="contractor-tab-pane" role="tabpanel" aria-labelledby="contractor-tab" tabindex="0">
+            id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+              <div class="col-12 px-0">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">کدملی</label>
+                  <input placeholder="5479874389" class="form-control">
+                </div>
+              </div>
+              <div class="col-12 px-0">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">نام</label>
+                  <input placeholder="صابر" class="form-control">
+                </div>
+              </div>
+              <div class="col-12 px-0">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">نام و نام خانوادگی</label>
+                  <input placeholder="علی نژاد" class="form-control">
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-4 justify-content-between px-0">
+                <div class="flex-grow-1">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">استان</label>
+                    <select class="form-select">
+                      <option>تهران</option>
+                      <option>قم</option>
+                      <option>قزوین</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="flex-grow-1">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">شهر</label>
+                    <select class="form-select">
+                      <option>تهران</option>
+                      <option>قم</option>
+                      <option>قزوین</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 px-0">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">آدرس دقیق</label>
+                  <textarea rows="5"
+                    class="form-control">شهر رفسنجان، میدان امیرکبیر، بلوار عدالت ، خیابان بنفشه کوچه 12 ، پلاک 18 </textarea>
+                </div>
+              </div>
+              <input type="submit" value="ثبت اطلاعات" class="btn text-white font-bold py-2 w-100 bg-info">
+            </form>
+            <form action="complete-info2.html" class="row mt-2 g-4 font-bold mb-4 tab-pane fade"
+            id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
               <div class="col-12 px-0">
                 <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label">کدملی</label>
