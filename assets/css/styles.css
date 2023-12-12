@@ -274,7 +274,13 @@ a {
     left: 0;
     right: auto;
 }
-
+.law .swiper.machines .swiper-slide > div:first-child,.lawRow>div>div>div:first-child{
+    height: 174px;
+}
+.law .swiper.machines .swiper-slide > div:first-child img,.lawRow>div>div>div:first-child img{
+    height: 100%;
+    object-fit: cover;
+}
 .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
     bottom: 15px;
@@ -623,6 +629,9 @@ footer .arrow-link {
     };
     .machine-img-box {
         height: auto;
+    }
+    .law .swiper.machines .swiper-slide > div:first-child{
+        height: 260px;
     }
 }
 
